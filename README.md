@@ -19,7 +19,6 @@ What it needs to run
 
 * ruby
 * macvim
-* the tohtml.vim plugin (change the path to it into the vimrc file provided if you have it installed elsewhere)
 
 What still needs to be done
 ----
