@@ -37,7 +37,7 @@ def setup_languages
   hash
 end
 
-vim_colorschemes = Dir.real_entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }[0..2]
+vim_colorschemes = Dir.real_entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }
 
 languages = setup_languages()
 
