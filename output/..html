@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="use_css,pre_wrap">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #d9d9d9; background-color: #404040; }
+body { font-family: monospace; color: #d9d9d9; background-color: #404040; }
+.Comment { color: #ffb6c1; }
+.Identifier { color: #40ffff; }
+.Statement { color: #87ceeb; font-weight: bold; }
+.Type { color: #87ceeb; font-weight: bold; }
+.Constant { color: #00ff7f; }
+.Special { color: #ffa500; }
+.PreProc { color: #87ceeb; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="PreProc">#!/usr/bin/env ruby</span>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="Constant">rubygems</span><span class="Special">'</span>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="Constant">nokogiri</span><span class="Special">'</span>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="Constant">open-uri</span><span class="Special">'</span>
+<span class="PreProc">require</span> <span class="Special">'</span><span class="Constant">thor</span><span class="Special">'</span>
+
+<span class="PreProc">class</span> <span class="Type">PictureDocument</span>
+
+	<span class="PreProc">def</span> <span class="Statement">initialize</span> url, domain_name
+		<span class="Identifier">@document</span> = <span class="Type">Nokogiri</span>::HTML(open(url))
+		<span class="Identifier">@domain_name</span> = domain_name
+	<span class="PreProc">end</span>
+
+	<span class="PreProc">def</span> <span class="Statement">image_url</span>
+		download_link = <span class="Identifier">@document</span>.css(<span class="Special">'</span><span class="Constant">.download_link a</span><span class="Special">'</span>)
+		<span class="Statement">if</span> download_link.empty?
+			<span class="Statement">return</span> <span class="Constant">nil</span>
+		<span class="Statement">else</span>
+			<span class="Statement">return</span> download_link.first.attributes[<span class="Special">&quot;</span><span class="Constant">href</span><span class="Special">&quot;</span>].value
+		<span class="Statement">end</span>
+	<span class="PreProc">end</span>
+
+	<span class="PreProc">def</span> <span class="Statement">next_page_url</span>
+		next_page_url = <span class="Identifier">@domain_name</span> + <span class="Identifier">@document</span>.css(<span class="Special">'</span><span class="Constant">.prev a</span><span class="Special">'</span>).first.attributes[<span class="Special">&quot;</span><span class="Constant">href</span><span class="Special">&quot;</span>].value
+		puts next_page_url
+		<span class="Statement">return</span> next_page_url
+	<span class="PreProc">end</span>
+<span class="PreProc">end</span>
+
+<span class="PreProc">class</span> <span class="Type">NationalGeographicDownloader</span> &lt; <span class="Type">Thor</span>
+
+	<span class="Type">LAST_DOWNLOADED_PATH</span> = <span class="Special">'</span><span class="Constant">.last_download</span><span class="Special">'</span>
+
+
+	desc <span class="Special">'</span><span class="Constant">download</span><span class="Special">'</span>, <span class="Special">'</span><span class="Constant">Downloads pictures</span><span class="Special">'</span>
+	method_option <span class="Constant">:number_of_pictures</span>, <span class="Constant">:type</span> =&gt; <span class="Constant">:numeric</span>, <span class="Constant">:aliases</span> =&gt; <span class="Special">'</span><span class="Constant">-n</span><span class="Special">'</span>, <span class="Constant">:default</span> =&gt; <span class="Constant">10</span>
+	method_option <span class="Constant">:starting_url</span>, <span class="Constant">:type</span> =&gt; <span class="Constant">:string</span>, <span class="Constant">:aliases</span> =&gt; <span class="Special">'</span><span class="Constant">-s</span><span class="Special">'</span>, <span class="Constant">:default</span> =&gt; <span class="Special">&quot;</span><span class="Constant"><a href="http://photography.nationalgeographic.com/photography/photo-of-the-day">http://photography.nationalgeographic.com/photography/photo-of-the-day</a></span><span class="Special">&quot;</span>
+	method_option <span class="Constant">:resume_from_last_download</span>, <span class="Constant">:type</span> =&gt; <span class="Constant">:boolean</span>, <span class="Constant">:aliases</span> =&gt; <span class="Special">'</span><span class="Constant">-r</span><span class="Special">'</span>, <span class="Constant">:default</span> =&gt; <span class="Constant">false</span>
+	method_option <span class="Constant">:download_dir</span>, <span class="Constant">:type</span> =&gt; <span class="Constant">:string</span>, <span class="Constant">:aliases</span> =&gt; <span class="Special">'</span><span class="Constant">-d</span><span class="Special">'</span>, <span class="Constant">:default</span> =&gt; <span class="Special">'</span><span class="Constant">./</span><span class="Special">'</span>
+	method_options <span class="Constant">:force_overwrite</span> =&gt; <span class="Constant">false</span>
+	<span class="PreProc">def</span> <span class="Statement">download</span>
+		domain_name = <span class="Special">&quot;</span><span class="Constant"><a href="http://photography.nationalgeographic.com">http://photography.nationalgeographic.com</a></span><span class="Special">&quot;</span>
+		<span class="Statement">if</span> options.resume_from_last_download
+			<span class="Statement">begin</span>
+				<span class="Type">File</span>.open(<span class="Type">LAST_DOWNLOADED_PATH</span>, <span class="Special">'</span><span class="Constant">r</span><span class="Special">'</span>) <span class="Statement">do</span> |<span class="Identifier">file</span>|
+					<span class="Identifier">@url</span> = file.gets
+					puts <span class="Identifier">@url</span>
+				<span class="Statement">end</span>
+			<span class="Statement">rescue</span> <span class="Type">Exception</span> =&gt; e
+				puts <span class="Special">&quot;</span><span class="Constant">Cannot retrieve last downloaded url, are you sure you already ran this script at least once?</span><span class="Special">&quot;</span>
+				<span class="Statement">exit</span> <span class="Constant">1</span>
+			<span class="Statement">end</span>
+		<span class="Statement">else</span>
+			<span class="Identifier">@url</span> = options.starting_url
+		<span class="Statement">end</span>
+		number_of_downloaded_pictures = <span class="Constant">0</span>
+		<span class="Statement">while</span> number_of_downloaded_pictures &lt;= options.number_of_pictures <span class="Statement">do</span>
+			picture_document = <span class="Type">PictureDocument</span>.new(<span class="Identifier">@url</span>, domain_name)
+			image_url = picture_document.image_url
+			<span class="Statement">if</span> image_url
+				<span class="Comment"># download picture</span>
+				print <span class="Special">&quot;</span><span class="Constant">Download link found in page at url </span><span class="Special">#{</span><span class="Identifier">@url</span><span class="Special">}</span><span class="Constant">, proceeding...</span><span class="Special">&quot;</span>
+				target_path = <span class="Type">File</span>.join(options.download_dir, image_url.split(<span class="Special">'</span><span class="Constant">/</span><span class="Special">'</span>).last)
+				<span class="Statement">if</span> <span class="Type">File</span>.exist?(target_path) &amp;&amp; (options.force_overwrite != <span class="Constant">true</span>)
+					puts <span class="Special">&quot;</span><span class="Constant">Image </span><span class="Special">#{</span>target_path<span class="Special">}</span><span class="Constant"> already downloaded, exiting! Bye!</span><span class="Special">&quot;</span>
+					<span class="Statement">exit</span>
+				<span class="Statement">end</span>
+				system(<span class="Special">&quot;</span><span class="Constant">wget </span><span class="Special">#{</span>image_url<span class="Special">}</span><span class="Constant"> -O </span><span class="Special">#{</span>target_path<span class="Special">}</span><span class="Constant">  2&gt;/dev/null</span><span class="Special">&quot;</span>)
+				puts <span class="Special">&quot;</span><span class="Constant"> [DONE]</span><span class="Special">&quot;</span>
+				number_of_downloaded_pictures = number_of_downloaded_pictures + <span class="Constant">1</span>
+			<span class="Statement">else</span>
+				<span class="Comment"># skip and go to next page</span>
+				puts <span class="Special">&quot;</span><span class="Constant">Page at url </span><span class="Special">#{</span><span class="Identifier">@url</span><span class="Special">}</span><span class="Constant"> has no download link, skipping...</span><span class="Special">&quot;</span>
+			<span class="Statement">end</span>
+			<span class="Identifier">@url</span> = picture_document.next_page_url
+		<span class="Statement">end</span>
+		puts <span class="Special">&quot;</span><span class="Constant">Last downloaded picture was at url </span><span class="Special">#{</span><span class="Identifier">@url</span><span class="Special">}</span><span class="Special">&quot;</span>
+		<span class="Type">File</span>.open(<span class="Type">LAST_DOWNLOADED_PATH</span>, <span class="Special">'</span><span class="Constant">w</span><span class="Special">'</span>) <span class="Statement">do</span> |<span class="Identifier">file</span>|
+			file.puts <span class="Identifier">@url</span>
+		<span class="Statement">end</span>
+	<span class="PreProc">end</span>
+<span class="PreProc">end</span>
+
+<span class="Type">NationalGeographicDownloader</span>.start
+
+
+</pre>
+</body>
+</html>

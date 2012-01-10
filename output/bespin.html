@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="number_lines,use_css,expand_tabs">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #baae9e; background-color: #28211c; }
+body { font-family: monospace; color: #baae9e; background-color: #28211c; }
+.lnr { color: #71685d; background-color: #28211c; }
+.Comment { color: #666666; font-style: italic; }
+.Statement { color: #5ea6ea; }
+.rubyBlockParameter { color: #7587a6; }
+.Boolean { color: #cf6a4c; }
+.Number { color: #cf6a4c; }
+.rubySymbol { color: #cf6a4c; }
+.rubyPseudoVariable { color: #7587a6; }
+.rubyControl { color: #5ea6ea; }
+.Conditional { color: #5ea6ea; }
+.rubyInstanceVariable { color: #7587a6; }
+.rubyFunction { color: #937121; }
+.Define { color: #5ea6ea; }
+.rubyConstant { color: #9b859d; }
+.rubyClass { color: #5ea6ea; }
+.String { color: #54be0d; }
+.rubyStringDelimiter { color: #54be0d; }
+.rubyInclude { color: #5ea6ea; }
+.PreProc { color: #5ea6ea; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span><span class="PreProc">#!/usr/bin/env ruby</span>
+<span class="lnr"> 2 </span><span class="rubyInclude">require</span> <span class="rubyStringDelimiter">'</span><span class="String">rubygems</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr"> 3 </span><span class="rubyInclude">require</span> <span class="rubyStringDelimiter">'</span><span class="String">nokogiri</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr"> 4 </span><span class="rubyInclude">require</span> <span class="rubyStringDelimiter">'</span><span class="String">open-uri</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr"> 5 </span><span class="rubyInclude">require</span> <span class="rubyStringDelimiter">'</span><span class="String">thor</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr"> 6 </span>
+<span class="lnr"> 7 </span><span class="rubyClass">class</span> <span class="rubyConstant">PictureDocument</span>
+<span class="lnr"> 8 </span>
+<span class="lnr"> 9 </span>  <span class="Define">def</span> <span class="rubyFunction">initialize</span> url, domain_name
+<span class="lnr">10 </span>    <span class="rubyInstanceVariable">@document</span> = <span class="rubyConstant">Nokogiri</span>::HTML(open(url))
+<span class="lnr">11 </span>    <span class="rubyInstanceVariable">@domain_name</span> = domain_name
+<span class="lnr">12 </span>  <span class="Define">end</span>
+<span class="lnr">13 </span>
+<span class="lnr">14 </span>  <span class="Define">def</span> <span class="rubyFunction">image_url</span>
+<span class="lnr">15 </span>    download_link = <span class="rubyInstanceVariable">@document</span>.css(<span class="rubyStringDelimiter">'</span><span class="String">.download_link a</span><span class="rubyStringDelimiter">'</span>)
+<span class="lnr">16 </span>    <span class="Conditional">if</span> download_link.empty?
+<span class="lnr">17 </span>      <span class="rubyControl">return</span> <span class="rubyPseudoVariable">nil</span>
+<span class="lnr">18 </span>    <span class="Conditional">else</span>
+<span class="lnr">19 </span>      <span class="rubyControl">return</span> download_link.first.attributes[<span class="rubyStringDelimiter">&quot;</span><span class="String">href</span><span class="rubyStringDelimiter">&quot;</span>].value
+<span class="lnr">20 </span>    <span class="Conditional">end</span>
+<span class="lnr">21 </span>  <span class="Define">end</span>
+<span class="lnr">22 </span>
+<span class="lnr">23 </span>  <span class="Define">def</span> <span class="rubyFunction">next_page_url</span>
+<span class="lnr">24 </span>    next_page_url = <span class="rubyInstanceVariable">@domain_name</span> + <span class="rubyInstanceVariable">@document</span>.css(<span class="rubyStringDelimiter">'</span><span class="String">.prev a</span><span class="rubyStringDelimiter">'</span>).first.attributes[<span class="rubyStringDelimiter">&quot;</span><span class="String">href</span><span class="rubyStringDelimiter">&quot;</span>].value
+<span class="lnr">25 </span>    puts next_page_url
+<span class="lnr">26 </span>    <span class="rubyControl">return</span> next_page_url
+<span class="lnr">27 </span>  <span class="Define">end</span>
+<span class="lnr">28 </span><span class="rubyClass">end</span>
+<span class="lnr">29 </span>
+<span class="lnr">30 </span><span class="rubyClass">class</span> <span class="rubyConstant">NationalGeographicDownloader</span> &lt; <span class="rubyConstant">Thor</span>
+<span class="lnr">31 </span>
+<span class="lnr">32 </span>  <span class="rubyConstant">LAST_DOWNLOADED_PATH</span> = <span class="rubyStringDelimiter">'</span><span class="String">.last_download</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr">33 </span>
+<span class="lnr">34 </span>
+<span class="lnr">35 </span>  desc <span class="rubyStringDelimiter">'</span><span class="String">download</span><span class="rubyStringDelimiter">'</span>, <span class="rubyStringDelimiter">'</span><span class="String">Downloads pictures</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr">36 </span>  method_option <span class="rubySymbol">:number_of_pictures</span>, <span class="rubySymbol">:type</span> =&gt; <span class="rubySymbol">:numeric</span>, <span class="rubySymbol">:aliases</span> =&gt; <span class="rubyStringDelimiter">'</span><span class="String">-n</span><span class="rubyStringDelimiter">'</span>, <span class="rubySymbol">:default</span> =&gt; <span class="Number">10</span>
+<span class="lnr">37 </span>  method_option <span class="rubySymbol">:starting_url</span>, <span class="rubySymbol">:type</span> =&gt; <span class="rubySymbol">:string</span>, <span class="rubySymbol">:aliases</span> =&gt; <span class="rubyStringDelimiter">'</span><span class="String">-s</span><span class="rubyStringDelimiter">'</span>, <span class="rubySymbol">:default</span> =&gt; <span class="rubyStringDelimiter">&quot;</span><span class="String"><a href="http://photography.nationalgeographic.com/photography/photo-of-the-day">http://photography.nationalgeographic.com/photography/photo-of-the-day</a></span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">38 </span>  method_option <span class="rubySymbol">:resume_from_last_download</span>, <span class="rubySymbol">:type</span> =&gt; <span class="rubySymbol">:boolean</span>, <span class="rubySymbol">:aliases</span> =&gt; <span class="rubyStringDelimiter">'</span><span class="String">-r</span><span class="rubyStringDelimiter">'</span>, <span class="rubySymbol">:default</span> =&gt; <span class="Boolean">false</span>
+<span class="lnr">39 </span>  method_option <span class="rubySymbol">:download_dir</span>, <span class="rubySymbol">:type</span> =&gt; <span class="rubySymbol">:string</span>, <span class="rubySymbol">:aliases</span> =&gt; <span class="rubyStringDelimiter">'</span><span class="String">-d</span><span class="rubyStringDelimiter">'</span>, <span class="rubySymbol">:default</span> =&gt; <span class="rubyStringDelimiter">'</span><span class="String">./</span><span class="rubyStringDelimiter">'</span>
+<span class="lnr">40 </span>  method_options <span class="rubySymbol">:force_overwrite</span> =&gt; <span class="Boolean">false</span>
+<span class="lnr">41 </span>  <span class="Define">def</span> <span class="rubyFunction">download</span>
+<span class="lnr">42 </span>    domain_name = <span class="rubyStringDelimiter">&quot;</span><span class="String"><a href="http://photography.nationalgeographic.com">http://photography.nationalgeographic.com</a></span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">43 </span>    <span class="Conditional">if</span> options.resume_from_last_download
+<span class="lnr">44 </span>      <span class="rubyControl">begin</span>
+<span class="lnr">45 </span>        <span class="rubyConstant">File</span>.open(<span class="rubyConstant">LAST_DOWNLOADED_PATH</span>, <span class="rubyStringDelimiter">'</span><span class="String">r</span><span class="rubyStringDelimiter">'</span>) <span class="rubyControl">do</span> |<span class="rubyBlockParameter">file</span>|
+<span class="lnr">46 </span>          <span class="rubyInstanceVariable">@url</span> = file.gets
+<span class="lnr">47 </span>          puts <span class="rubyInstanceVariable">@url</span>
+<span class="lnr">48 </span>        <span class="rubyControl">end</span>
+<span class="lnr">49 </span>      <span class="Conditional">rescue</span> <span class="rubyConstant">Exception</span> =&gt; e
+<span class="lnr">50 </span>        puts <span class="rubyStringDelimiter">&quot;</span><span class="String">Cannot retrieve last downloaded url, are you sure you already ran this script at least once?</span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">51 </span>        <span class="rubyControl">exit</span> <span class="Number">1</span>
+<span class="lnr">52 </span>      <span class="rubyControl">end</span>
+<span class="lnr">53 </span>    <span class="Conditional">else</span>
+<span class="lnr">54 </span>      <span class="rubyInstanceVariable">@url</span> = options.starting_url
+<span class="lnr">55 </span>    <span class="Conditional">end</span>
+<span class="lnr">56 </span>    number_of_downloaded_pictures = <span class="Number">0</span>
+<span class="lnr">57 </span>    <span class="Statement">while</span> number_of_downloaded_pictures &lt;= options.number_of_pictures <span class="Statement">do</span>
+<span class="lnr">58 </span>      picture_document = <span class="rubyConstant">PictureDocument</span>.new(<span class="rubyInstanceVariable">@url</span>, domain_name)
+<span class="lnr">59 </span>      image_url = picture_document.image_url
+<span class="lnr">60 </span>      <span class="Conditional">if</span> image_url
+<span class="lnr">61 </span>        <span class="Comment"># download picture</span>
+<span class="lnr">62 </span>        print <span class="rubyStringDelimiter">&quot;</span><span class="String">Download link found in page at url </span>#{<span class="rubyInstanceVariable">@url</span>}<span class="String">, proceeding...</span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">63 </span>        target_path = <span class="rubyConstant">File</span>.join(options.download_dir, image_url.split(<span class="rubyStringDelimiter">'</span><span class="String">/</span><span class="rubyStringDelimiter">'</span>).last)
+<span class="lnr">64 </span>        <span class="Conditional">if</span> <span class="rubyConstant">File</span>.exist?(target_path) &amp;&amp; (options.force_overwrite != <span class="Boolean">true</span>)
+<span class="lnr">65 </span>          puts <span class="rubyStringDelimiter">&quot;</span><span class="String">Image </span>#{target_path}<span class="String"> already downloaded, exiting! Bye!</span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">66 </span>          <span class="rubyControl">exit</span>
+<span class="lnr">67 </span>        <span class="Conditional">end</span>
+<span class="lnr">68 </span>        system(<span class="rubyStringDelimiter">&quot;</span><span class="String">wget </span>#{image_url}<span class="String"> -O </span>#{target_path}<span class="String">  2&gt;/dev/null</span><span class="rubyStringDelimiter">&quot;</span>)
+<span class="lnr">69 </span>        puts <span class="rubyStringDelimiter">&quot;</span><span class="String"> [DONE]</span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">70 </span>        number_of_downloaded_pictures = number_of_downloaded_pictures + <span class="Number">1</span>
+<span class="lnr">71 </span>      <span class="Conditional">else</span>
+<span class="lnr">72 </span>        <span class="Comment"># skip and go to next page</span>
+<span class="lnr">73 </span>        puts <span class="rubyStringDelimiter">&quot;</span><span class="String">Page at url </span>#{<span class="rubyInstanceVariable">@url</span>}<span class="String"> has no download link, skipping...</span><span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">74 </span>      <span class="Conditional">end</span>
+<span class="lnr">75 </span>      <span class="rubyInstanceVariable">@url</span> = picture_document.next_page_url
+<span class="lnr">76 </span>    <span class="Statement">end</span>
+<span class="lnr">77 </span>    puts <span class="rubyStringDelimiter">&quot;</span><span class="String">Last downloaded picture was at url </span>#{<span class="rubyInstanceVariable">@url</span>}<span class="rubyStringDelimiter">&quot;</span>
+<span class="lnr">78 </span>    <span class="rubyConstant">File</span>.open(<span class="rubyConstant">LAST_DOWNLOADED_PATH</span>, <span class="rubyStringDelimiter">'</span><span class="String">w</span><span class="rubyStringDelimiter">'</span>) <span class="rubyControl">do</span> |<span class="rubyBlockParameter">file</span>|
+<span class="lnr">79 </span>      file.puts <span class="rubyInstanceVariable">@url</span>
+<span class="lnr">80 </span>    <span class="rubyControl">end</span>
+<span class="lnr">81 </span>  <span class="Define">end</span>
+<span class="lnr">82 </span><span class="rubyClass">end</span>
+<span class="lnr">83 </span>
+<span class="lnr">84 </span><span class="rubyConstant">NationalGeographicDownloader</span>.start
+<span class="lnr">85 </span>
+<span class="lnr">86 </span>
+</pre>
+</body>
+</html>
