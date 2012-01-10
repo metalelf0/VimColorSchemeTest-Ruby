@@ -1,4 +1,11 @@
 #!/usr/bin/env ruby
+#
+
+class Dir
+  def self.real_entries dir
+    entries(dir).reject { |e| e == "." || e == ".." }
+  end
+end
 
 def remote_cmd command
   system "mvim -f -n --noplugin -U vimrc --servername \"VIMCOLORS\" --remote-send \":#{command} <CR>\""
@@ -6,7 +13,7 @@ end
 
 def setup_languages
   hash = {}
-  languages_filenames  = Dir.entries(File.join(File.dirname(__FILE__), 'samples')).reject { |e| e == "." || e == ".." } # TODO: extract reject
+  languages_filenames  = Dir.real_entries(File.join(File.dirname(__FILE__), 'samples'))
   languages_full_paths = languages_filenames.map { |filename| File.join("samples", filename) }
   language_names       = languages_filenames.map { |filename| filename.split(".").first }
   language_names.each_with_index do |name, index|
@@ -15,7 +22,7 @@ def setup_languages
   hash
 end
 
-vim_colorschemes = Dir.entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }.reject { |e| e == "." || e == ".." }
+vim_colorschemes = Dir.real_entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }
 
 languages = setup_languages()
 
