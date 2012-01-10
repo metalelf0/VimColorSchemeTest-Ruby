@@ -13,7 +13,7 @@ vim_colorschemes.each_with_index do |vim_colorscheme, index|
   remote_cmd "w! output/#{vim_colorscheme}.html"
   remote_cmd "bd!"
   puts "Colorscheme #{vim_colorscheme} done (#{index}/#{vim_colorschemes.size})"
-  sleep 1
+  sleep 0.5
 end
 remote_cmd "qall!"
 
