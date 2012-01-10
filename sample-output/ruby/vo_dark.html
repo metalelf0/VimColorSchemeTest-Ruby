@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="number_lines,use_css,expand_tabs">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+.lnr { color: #ddeeff; background-color: #222222; }
+.Normal { color: #ffffff; background-color: #000000; }
+.Constant { color: #339999; }
+.Statement { color: #ff6600; }
+.rubyMethod { color: #dde93d; }
+.Special { color: #33aa00; }
+.String { color: #66ff00; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span>$LOAD_PATH.unshift <span class="String">&quot;</span><span class="Special">#{</span>File.dirname(__FILE__)<span class="Special">}</span><span class="String">/../lib</span><span class="String">&quot;</span>
+<span class="lnr"> 2 </span><span class="rubyMethod">require</span> <span class="String">'</span><span class="String">active_record</span><span class="String">'</span>
+<span class="lnr"> 3 </span>
+<span class="lnr"> 4 </span><span class="Statement">class</span> Person &lt; ActiveRecord<span class="Statement">::</span>Base
+<span class="lnr"> 5 </span>  establish_connection <span class="Constant">:adapter</span> =&gt; <span class="String">'</span><span class="String">sqlite3</span><span class="String">'</span>, <span class="Constant">:database</span> =&gt; <span class="String">'</span><span class="String">foobar.db</span><span class="String">'</span>
+<span class="lnr"> 6 </span>  connection.create_table table_name, <span class="Constant">:force</span> =&gt; <span class="Constant">true</span> do |<span class="Normal">t</span>|
+<span class="lnr"> 7 </span>    t.string <span class="Constant">:name</span>
+<span class="lnr"> 8 </span>  end
+<span class="lnr"> 9 </span><span class="Statement">end</span>
+<span class="lnr">10 </span>
+<span class="lnr">11 </span>bob = Person.create!(<span class="Constant">:name</span> =&gt; <span class="String">'</span><span class="String">bob</span><span class="String">'</span>)
+<span class="lnr">12 </span>puts Person.all.inspect
+<span class="lnr">13 </span>bob.destroy
+<span class="lnr">14 </span>puts Person.all.inspect
+</pre>
+</body>
+</html>

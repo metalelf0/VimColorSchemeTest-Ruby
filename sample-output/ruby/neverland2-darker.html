@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="number_lines,use_css,expand_tabs">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #ffffff; background-color: #080808; }
+body { font-family: monospace; color: #ffffff; background-color: #080808; }
+.lnr { color: #626262; background-color: #080808; }
+.Boolean { color: #af5fff; }
+.Normal { color: #ffffff; background-color: #080808; }
+.String { color: #d7af5f; }
+.Special { color: #5fd7ff; background-color: #080808; }
+.Identifier { color: #d75f00; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span>$LOAD_PATH.unshift &quot;<span class="Identifier">#{</span><span class="Special">File</span>.dirname(__FILE__)<span class="Identifier">}</span><span class="String">/../lib</span>&quot;
+<span class="lnr"> 2 </span>require '<span class="String">active_record</span>'
+<span class="lnr"> 3 </span>
+<span class="lnr"> 4 </span>class <span class="Special">Person</span> &lt; <span class="Special">ActiveRecord</span><span class="Normal">::</span><span class="Special">Base</span>
+<span class="lnr"> 5 </span>  establish_connection :adapter =&gt; '<span class="String">sqlite3</span>', :database =&gt; '<span class="String">foobar.db</span>'
+<span class="lnr"> 6 </span>  connection.create_table table_name, :force =&gt; <span class="Boolean">true</span> do |t|
+<span class="lnr"> 7 </span>    t.string :name
+<span class="lnr"> 8 </span>  end
+<span class="lnr"> 9 </span>end
+<span class="lnr">10 </span>
+<span class="lnr">11 </span>bob = <span class="Special">Person</span>.create!(:name =&gt; '<span class="String">bob</span>')
+<span class="lnr">12 </span>puts <span class="Special">Person</span>.all.inspect
+<span class="lnr">13 </span>bob.destroy
+<span class="lnr">14 </span>puts <span class="Special">Person</span>.all.inspect
+</pre>
+</body>
+</html>
