@@ -32,7 +32,7 @@ languages.each do |language|
   sleep 2
 
   vim_colorschemes.each_with_index do |vim_colorscheme, index|
-    scheme = ColorScheme.new(:name => vim_colorscheme, :language => language)
+    scheme = ColorScheme.new(:name => vim_colorscheme, :vim_connection => language.vim_connection)
     scheme.convert
     scheme.write_to(language.output_dir)
     language.index_file.append_colorscheme(scheme.name, index)

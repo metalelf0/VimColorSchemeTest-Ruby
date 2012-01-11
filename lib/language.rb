@@ -1,9 +1,9 @@
 class Language
 
-  attr_accessor :name
-  attr_accessor :template
-  attr_accessor :index_file
-  attr_accessor :vim_connection
+  attr_reader :name
+  attr_reader :template
+  attr_reader :index_file
+  attr_reader :vim_connection
 
   def initialize params
     @name = params[:name]

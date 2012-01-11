@@ -4,7 +4,7 @@ class ColorScheme
 
   def initialize params
     @name = params[:name]
-    @vim_connection = params[:language].vim_connection
+    @vim_connection = params[:vim_connection]
   end
 
   def convert
