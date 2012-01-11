@@ -2,16 +2,17 @@ class ColorScheme
 
   def initialize params
     @name = params[:name]
+    @vim_connection = params[:vim_connection]
   end
 
   def convert
-    remote_cmd "colorscheme #{@name}"
-    remote_cmd "TOhtml"
+    @vim_connection.remote_cmd "colorscheme #{@name}"
+    @vim_connection.remote_cmd "TOhtml"
   end
 
   def write_to output_dir
-    remote_cmd "w! #{output_dir}/#{@name}.html"
-    remote_cmd "bd!"
+    @vim_connection.remote_cmd "w! #{output_dir}/#{@name}.html"
+    @vim_connection.remote_cmd "bd!"
   end
 
   def append_to_index(file, language_name, index)
@@ -21,10 +22,6 @@ class ColorScheme
   end
 
   private
-
-    def remote_cmd command
-      system "mvim -f -n --noplugin -U vimrc --servername \"VIMCOLORS\" --remote-send \":#{command} <CR>\""
-    end
 
     def colorscheme_td_for params
       string =  '<td width="33%" height="300px">'
