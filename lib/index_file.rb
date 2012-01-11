@@ -1,8 +1,8 @@
 class IndexFile
 
-  def initialize params
-    @file = File.open(params[:path], "w")
-    @language = params[:language] 
+  def initialize language
+    @file = File.open(language.index_file_path, "w")
+    @language = language.name
   end
 
   def append_colorscheme(colorscheme_name, index)

@@ -1,8 +1,10 @@
 class ColorScheme
 
+  attr_accessor :name
+
   def initialize params
     @name = params[:name]
-    @vim_connection = params[:vim_connection]
+    @vim_connection = params[:language].vim_connection
   end
 
   def convert
