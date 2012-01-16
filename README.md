@@ -25,6 +25,7 @@ What it needs to run
 
 * ruby
 * macvim
+* tilt rubygem (to render the index template)
 
 What still needs to be done
 ----

@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require 'erb'
+require 'tilt'
+
 class Dir
   def self.real_entries dir
     entries(dir).reject { |e| e == "." || e == ".." }
@@ -22,24 +25,25 @@ def setup_languages
   languages
 end
 
-vim_colorschemes = Dir.real_entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }
+vim_colorschemes = Dir.real_entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }[0..6]
 
 languages = setup_languages()
 
 languages.each do |language|
-  language.index_file.write_header
   language.vim_connection.open
   sleep 2
+  color_names = []
 
   vim_colorschemes.each_with_index do |vim_colorscheme, index|
     scheme = ColorScheme.new(:name => vim_colorscheme, :vim_connection => language.vim_connection)
     scheme.convert
     scheme.write_to(language.output_dir)
-    language.index_file.append_colorscheme(scheme.name, index)
+    color_names << scheme.name
     puts "Language #{language.name}, colorscheme #{scheme.name} done (#{index + 1}/#{vim_colorschemes.size})"
     sleep 0.5
   end
   language.vim_connection.close
-  language.index_file.write_footer
+  language.index_file.write(color_names)
+
 end
 
