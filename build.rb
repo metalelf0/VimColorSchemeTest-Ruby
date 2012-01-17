@@ -25,25 +25,27 @@ def setup_languages
   languages
 end
 
-vim_colorschemes = Dir.real_entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }[0..6]
+vim_colorschemes = Dir.real_entries(File.join(ENV['HOME'], '.vim', 'colors')).map { |c| c.gsub("\.vim", "") }
 
 languages = setup_languages()
 
 languages.each do |language|
-  language.vim_connection.open
+  vim_connection = VimConnection.new(language)
+  vim_connection.open
   sleep 2
   color_names = []
 
   vim_colorschemes.each_with_index do |vim_colorscheme, index|
-    scheme = ColorScheme.new(:name => vim_colorscheme, :vim_connection => language.vim_connection)
+    scheme = ColorScheme.new(:name => vim_colorscheme, :vim_connection => vim_connection)
     scheme.convert
     scheme.write_to(language.output_dir)
     color_names << scheme.name
     puts "Language #{language.name}, colorscheme #{scheme.name} done (#{index + 1}/#{vim_colorschemes.size})"
     sleep 0.5
   end
-  language.vim_connection.close
-  language.index_file.write(color_names)
+  vim_connection.close
+  index_file = IndexFile.new(language)
+  index_file.write(color_names)
 
 end
 
