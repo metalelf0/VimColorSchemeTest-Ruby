@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'erb'
-require 'tilt'
 
 class Dir
   def self.real_entries dir
