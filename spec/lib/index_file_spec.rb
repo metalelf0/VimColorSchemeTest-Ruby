@@ -1,6 +1,5 @@
 require File.join(File.dirname(__FILE__), "..", "..", "lib", "index_file")
 require File.join(File.dirname(__FILE__), "..", "..", "lib", "file_writer")
-require 'tilt'
 
 describe IndexFile do
 
