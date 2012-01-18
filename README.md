@@ -18,7 +18,8 @@ The script loads all your colorschemes from your default vim directory
 colorscheme, with a render of a Ruby file using this colorscheme.  It
 also writes a different copy for each language present in the samples/
 directory. It also builds an index page for each language, with a
-showcase of how the colorschemes render the sample code.
+showcase of how the colorschemes render the sample code, and a download
+link for each colorscheme.
 
 What it needs to run
 ----
@@ -32,8 +33,8 @@ What still needs to be done
 
 * Separate light and dark colorschemes
 * Make this work with versions of vim different from MacVim
-* Add the vim colorschemes to the project dir
-* Add links to download the vim colorschemes
+* Add preview button for each colorscheme in the index page (lightbox or
+  something similar)
 
 Notes
 ----
