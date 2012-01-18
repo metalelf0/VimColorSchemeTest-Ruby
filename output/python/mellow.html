@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/python.py.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="python">
+<meta name="settings" content="number_lines,use_css,expand_tabs">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffcc; }
+body { font-family: monospace; color: #000000; background-color: #ffffcc; }
+.lnr { color: #ffffff; background-color: #666600; }
+.Number { color: #808880; }
+.Identifier { color: #663333; }
+.Type { color: #0000c8; }
+.PreProc { color: #808040; }
+.String { color: #006666; }
+.Comment { color: #996600; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span><span class="Comment"># coding: utf-8</span>
+<span class="lnr"> 2 </span><span class="String">&quot;&quot;&quot;</span>
+<span class="lnr"> 3 </span><span class="String">1. Bare-bones model</span>
+<span class="lnr"> 4 </span>
+<span class="lnr"> 5 </span><span class="String">This is a basic model with only two non-primary-key fields.</span>
+<span class="lnr"> 6 </span><span class="String">&quot;&quot;&quot;</span>
+<span class="lnr"> 7 </span><span class="PreProc">from</span> django.db <span class="PreProc">import</span> models
+<span class="lnr"> 8 </span>
+<span class="lnr"> 9 </span>
+<span class="lnr">10 </span><span class="Type">class</span> <span class="Identifier">Article</span>(models.Model):
+<span class="lnr">11 </span>    headline = models.CharField(max_length=<span class="Number">100</span>, default=<span class="String">'Default headline'</span>)
+<span class="lnr">12 </span>    pub_date = models.DateTimeField()
+<span class="lnr">13 </span>
+<span class="lnr">14 </span>    <span class="Type">class</span> <span class="Identifier">Meta</span>:
+<span class="lnr">15 </span>        ordering = (<span class="String">'pub_date'</span>,<span class="String">'headline'</span>)
+<span class="lnr">16 </span>
+<span class="lnr">17 </span>    <span class="Type">def</span> <span class="Identifier">__unicode__</span>(self):
+<span class="lnr">18 </span>        <span class="Type">return</span> self.headline
+<span class="lnr">19 </span>
+</pre>
+</body>
+</html>

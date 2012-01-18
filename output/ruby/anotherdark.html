@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="number_lines,use_css,expand_tabs">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #ffffff; background-color: #333333; }
+body { font-family: monospace; color: #ffffff; background-color: #333333; }
+.lnr { color: #ffff00; }
+.Statement { color: #f0e68c; font-weight: bold; }
+.PreProc { color: #cd5c5c; }
+.Constant { color: #ffa0a0; }
+.Type { color: #bdb76b; font-weight: bold; }
+.Special { color: #ffdead; }
+.Identifier { color: #98fb98; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span><span class="Identifier">$LOAD_PATH</span>.unshift <span class="Special">&quot;</span><span class="Special">#{</span><span class="Type">File</span>.dirname(<span class="Constant">__FILE__</span>)<span class="Special">}</span><span class="Constant">/../lib</span><span class="Special">&quot;</span>
+<span class="lnr"> 2 </span><span class="PreProc">require</span> <span class="Special">'</span><span class="Constant">active_record</span><span class="Special">'</span>
+<span class="lnr"> 3 </span>
+<span class="lnr"> 4 </span><span class="PreProc">class</span> <span class="Type">Person</span> &lt; <span class="Type">ActiveRecord</span>::<span class="Type">Base</span>
+<span class="lnr"> 5 </span>  establish_connection <span class="Constant">:adapter</span> =&gt; <span class="Special">'</span><span class="Constant">sqlite3</span><span class="Special">'</span>, <span class="Constant">:database</span> =&gt; <span class="Special">'</span><span class="Constant">foobar.db</span><span class="Special">'</span>
+<span class="lnr"> 6 </span>  connection.create_table table_name, <span class="Constant">:force</span> =&gt; <span class="Constant">true</span> <span class="Statement">do</span> |<span class="Identifier">t</span>|
+<span class="lnr"> 7 </span>    t.string <span class="Constant">:name</span>
+<span class="lnr"> 8 </span>  <span class="Statement">end</span>
+<span class="lnr"> 9 </span><span class="PreProc">end</span>
+<span class="lnr">10 </span>
+<span class="lnr">11 </span>bob = <span class="Type">Person</span>.create!(<span class="Constant">:name</span> =&gt; <span class="Special">'</span><span class="Constant">bob</span><span class="Special">'</span>)
+<span class="lnr">12 </span>puts <span class="Type">Person</span>.all.inspect
+<span class="lnr">13 </span>bob.destroy
+<span class="lnr">14 </span>puts <span class="Type">Person</span>.all.inspect
+</pre>
+</body>
+</html>
