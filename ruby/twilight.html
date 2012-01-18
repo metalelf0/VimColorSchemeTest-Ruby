@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html</title>
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html.html</title>
 <meta name="Generator" content="Vim/7.3">
 <meta name="plugin-version" content="vim7.3_v6">
-<meta name="syntax" content="ruby">
+<meta name="syntax" content="html">
 <meta name="settings" content="number_lines,use_css,expand_tabs">
 <style type="text/css">
 <!--
@@ -13,28 +13,55 @@ pre { font-family: monospace; color: #fffedc; background-color: #1a1a1a; }
 body { font-family: monospace; color: #fffedc; background-color: #1a1a1a; }
 .lnr { color: #64686c; background-color: #1a1a1a; }
 .Constant { color: #d08356; background-color: #1a1a1a; }
-.Operator { color: #ebc471; background-color: #1a1a1a; }
-.Statement { color: #ceb67f; background-color: #1a1a1a; }
+.Identifier { color: #8a9597; background-color: #1a1a1a; }
 .String { color: #a2a96f; background-color: #1a1a1a; }
+.Conditional { color: #ceb67f; background-color: #1a1a1a; }
+.Statement { color: #ceb67f; background-color: #1a1a1a; }
+.Comment { color: #64686c; background-color: #1a1a1a; font-style: italic; }
 -->
 </style>
 </head>
 <body>
 <pre>
-<span class="lnr"> 1 </span>$LOAD_PATH.unshift &quot;#{File.dirname(__FILE__)}<span class="String">/../lib</span>&quot;
-<span class="lnr"> 2 </span>require '<span class="String">active_record</span>'
-<span class="lnr"> 3 </span>
-<span class="lnr"> 4 </span><span class="Statement">class</span> Person &lt; ActiveRecord<span class="Operator">::</span>Base
-<span class="lnr"> 5 </span>  establish_connection :adapter =&gt; '<span class="String">sqlite3</span>', :database =&gt; '<span class="String">foobar.db</span>'
-<span class="lnr"> 6 </span>  connection.create_table table_name, :force =&gt; <span class="Constant">true</span> do |t|
-<span class="lnr"> 7 </span>    t.string :name
-<span class="lnr"> 8 </span>  end
-<span class="lnr"> 9 </span><span class="Statement">end</span>
-<span class="lnr">10 </span>
-<span class="lnr">11 </span>bob = Person.create!(:name =&gt; '<span class="String">bob</span>')
-<span class="lnr">12 </span>puts Person.all.inspect
-<span class="lnr">13 </span>bob.destroy
-<span class="lnr">14 </span>puts Person.all.inspect
+<span class="lnr"> 1 </span><span class="Comment">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;<a href="http://www.w3.org/TR/html4/strict.dtd">http://www.w3.org/TR/html4/strict.dtd</a>&quot;&gt;</span>
+<span class="lnr"> 2 </span><span class="Statement">&lt;</span><span class="Conditional">html</span><span class="Statement">&gt;</span>
+<span class="lnr"> 3 </span><span class="Statement">&lt;</span><span class="Conditional">head</span><span class="Statement">&gt;</span>
+<span class="lnr"> 4 </span><span class="Statement">&lt;</span><span class="Conditional">meta</span><span class="Statement"> </span>http-equiv<span class="Statement">=</span><span class="String">&quot;content-type&quot;</span><span class="Statement"> </span>content<span class="Statement">=</span><span class="String">&quot;text/html; charset=UTF-8&quot;</span><span class="Statement">&gt;</span>
+<span class="lnr"> 5 </span><span class="Statement">&lt;</span><span class="Conditional">title</span><span class="Statement">&gt;</span>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html<span class="Identifier">&lt;/</span><span class="Conditional">title</span><span class="Identifier">&gt;</span>
+<span class="lnr"> 6 </span><span class="Statement">&lt;</span><span class="Conditional">meta</span><span class="Statement"> </span>name<span class="Statement">=</span><span class="String">&quot;Generator&quot;</span><span class="Statement"> </span>content<span class="Statement">=</span><span class="String">&quot;Vim/7.3&quot;</span><span class="Statement">&gt;</span>
+<span class="lnr"> 7 </span><span class="Statement">&lt;</span><span class="Conditional">meta</span><span class="Statement"> </span>name<span class="Statement">=</span><span class="String">&quot;plugin-version&quot;</span><span class="Statement"> </span>content<span class="Statement">=</span><span class="String">&quot;vim7.3_v6&quot;</span><span class="Statement">&gt;</span>
+<span class="lnr"> 8 </span><span class="Statement">&lt;</span><span class="Conditional">meta</span><span class="Statement"> </span>name<span class="Statement">=</span><span class="String">&quot;syntax&quot;</span><span class="Statement"> </span>content<span class="Statement">=</span><span class="String">&quot;ruby&quot;</span><span class="Statement">&gt;</span>
+<span class="lnr"> 9 </span><span class="Statement">&lt;</span><span class="Conditional">meta</span><span class="Statement"> </span>name<span class="Statement">=</span><span class="String">&quot;settings&quot;</span><span class="Statement"> </span>content<span class="Statement">=</span><span class="String">&quot;number_lines,use_css,expand_tabs&quot;</span><span class="Statement">&gt;</span>
+<span class="lnr">10 </span><span class="Statement">&lt;</span>style<span class="Statement"> </span>type<span class="Statement">=</span><span class="String">&quot;text/css&quot;</span><span class="Statement">&gt;</span>
+<span class="lnr">11 </span><span class="Comment">&lt;!--</span>
+<span class="lnr">12 </span>pre { font-family: <span class="Constant">monospace</span>; color: #000000; background-color: #ffffff; }
+<span class="lnr">13 </span>body { font-family: <span class="Constant">monospace</span>; color: #000000; background-color: #ffffff; }
+<span class="lnr">14 </span>.lnr { color: #aabbcc; background-color: #f2f8ff; }
+<span class="lnr">15 </span>.Statement { color: #2f6f9f; background-color: #f4faff; }
+<span class="lnr">16 </span>.Constant { color: #d44950; }:bd!
+<span class="lnr">17 </span>
+<span class="lnr">18 </span><span class="Comment">--&gt;</span>
+<span class="lnr">19 </span><span class="Identifier">&lt;/</span>style<span class="Identifier">&gt;</span>
+<span class="lnr">20 </span><span class="Identifier">&lt;/</span><span class="Conditional">head</span><span class="Identifier">&gt;</span>
+<span class="lnr">21 </span><span class="Statement">&lt;</span><span class="Conditional">body</span><span class="Statement">&gt;</span>
+<span class="lnr">22 </span><span class="Statement">&lt;</span><span class="Conditional">pre</span><span class="Statement">&gt;</span>
+<span class="lnr">23 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 1 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>$LOAD_PATH.unshift <span class="Statement">&amp;quot;</span>#{File.dirname(__FILE__)}<span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Constant&quot;</span><span class="Statement">&gt;</span>/../lib<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span><span class="Statement">&amp;quot;</span>
+<span class="lnr">24 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 2 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>require '<span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Constant&quot;</span><span class="Statement">&gt;</span>active_record<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>'
+<span class="lnr">25 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 3 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>
+<span class="lnr">26 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 4 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Statement&quot;</span><span class="Statement">&gt;</span>class<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span> Person <span class="Statement">&amp;lt;</span> ActiveRecord<span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Statement&quot;</span><span class="Statement">&gt;</span>::<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>Base
+<span class="lnr">27 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 5 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>  establish_connection :adapter =<span class="Statement">&amp;gt;</span> '<span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Constant&quot;</span><span class="Statement">&gt;</span>sqlite3<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>', :database =<span class="Statement">&amp;gt;</span> '<span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Constant&quot;</span><span class="Statement">&gt;</span>foobar.db<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>'
+<span class="lnr">28 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 6 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>  connection.create_table table_name, :force =<span class="Statement">&amp;gt;</span> <span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Constant&quot;</span><span class="Statement">&gt;</span>true<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span> do |t|
+<span class="lnr">29 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 7 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>    t.string :name
+<span class="lnr">30 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 8 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>  end
+<span class="lnr">31 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span> 9 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Statement&quot;</span><span class="Statement">&gt;</span>end<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>
+<span class="lnr">32 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span>10 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>
+<span class="lnr">33 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span>11 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>bob = Person.create!(:name =<span class="Statement">&amp;gt;</span> '<span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;Constant&quot;</span><span class="Statement">&gt;</span>bob<span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>')
+<span class="lnr">34 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span>12 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>puts Person.all.inspect
+<span class="lnr">35 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span>13 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>bob.destroy
+<span class="lnr">36 </span><span class="Statement">&lt;</span><span class="Conditional">span</span><span class="Statement"> </span>class<span class="Statement">=</span><span class="String">&quot;lnr&quot;</span><span class="Statement">&gt;</span>14 <span class="Identifier">&lt;/</span><span class="Conditional">span</span><span class="Identifier">&gt;</span>puts Person.all.inspect
+<span class="lnr">37 </span><span class="Identifier">&lt;/</span><span class="Conditional">pre</span><span class="Identifier">&gt;</span>
+<span class="lnr">38 </span><span class="Identifier">&lt;/</span><span class="Conditional">body</span><span class="Identifier">&gt;</span>
+<span class="lnr">39 </span><span class="Identifier">&lt;/</span><span class="Conditional">html</span><span class="Identifier">&gt;</span>
 </pre>
 </body>
 </html>
