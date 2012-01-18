@@ -24,12 +24,19 @@ def setup_languages
   languages
 end
 
-colorschemes_output_dir = File.join(File.dirname(__FILE__), 'output', 'colorschemes') 
+colorschemes_output_dir = File.join(File.dirname(__FILE__), 'output', 'colorschemes')
 
 FileCopier.new.copy(
   :from => File.join(ENV['HOME'], '.vim', 'colors', '*'),
   :to   => colorschemes_output_dir
 )
+
+FileCopier.new.copy(
+  :from => File.join(File.dirname(__FILE__), 'utils', '*'),
+  :to   => File.join(File.dirname(__FILE__), 'output')
+)
+
+
 vim_colorschemes = Dir.real_entries(colorschemes_output_dir).map { |c| c.gsub("\.vim", "") }
 
 languages = setup_languages()
