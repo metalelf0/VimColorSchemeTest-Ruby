@@ -1,6 +1,12 @@
 Vim Color Scheme Test Ruby
 ==========================
 
+See it in action!
+---
+
+http://metalelf0.github.com/VimColorSchemeTest-Ruby/python.html
+http://metalelf0.github.com/VimColorSchemeTest-Ruby/ruby.html
+
 Why
 ----
 
