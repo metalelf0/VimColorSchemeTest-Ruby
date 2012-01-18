@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>VIM Color Scheme Test</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
     <style>
       body { background: White; }
       a {
@@ -25,6 +28,14 @@
         var tds = document.getElementsByTagName("td");
         for(var i = 0; i < tds.length; i++) { tds[i].setAttribute("height", h + "px"); }
       }
+
+			$(document).ready(function() {
+          $("a.iframe").fancybox({
+						'width' : 800,
+						'height': 600
+          });
+			});
+
     </script>
     <ul>
       <li>This page really requires a modern web browser. Click <a
@@ -52,7 +63,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/adaryn.vim">adaryn</a><br>
+          <span class="iframe_title">adaryn</span>&mdash;
+          <a class="frames" href="colorschemes/adaryn.vim">Download</a> &mdash;
+          <a class="iframe" href="python/adaryn.html">Preview</a><br/>
           <iframe src="python/adaryn.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -63,7 +76,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/aiseered.vim">aiseered</a><br>
+          <span class="iframe_title">aiseered</span>&mdash;
+          <a class="frames" href="colorschemes/aiseered.vim">Download</a> &mdash;
+          <a class="iframe" href="python/aiseered.html">Preview</a><br/>
           <iframe src="python/aiseered.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -74,7 +89,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/ambient.vim">ambient</a><br>
+          <span class="iframe_title">ambient</span>&mdash;
+          <a class="frames" href="colorschemes/ambient.vim">Download</a> &mdash;
+          <a class="iframe" href="python/ambient.html">Preview</a><br/>
           <iframe src="python/ambient.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -89,7 +106,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/anotherdark.vim">anotherdark</a><br>
+          <span class="iframe_title">anotherdark</span>&mdash;
+          <a class="frames" href="colorschemes/anotherdark.vim">Download</a> &mdash;
+          <a class="iframe" href="python/anotherdark.html">Preview</a><br/>
           <iframe src="python/anotherdark.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -100,7 +119,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/astronaut.vim">astronaut</a><br>
+          <span class="iframe_title">astronaut</span>&mdash;
+          <a class="frames" href="colorschemes/astronaut.vim">Download</a> &mdash;
+          <a class="iframe" href="python/astronaut.html">Preview</a><br/>
           <iframe src="python/astronaut.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -111,7 +132,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/asu1dark.vim">asu1dark</a><br>
+          <span class="iframe_title">asu1dark</span>&mdash;
+          <a class="frames" href="colorschemes/asu1dark.vim">Download</a> &mdash;
+          <a class="iframe" href="python/asu1dark.html">Preview</a><br/>
           <iframe src="python/asu1dark.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -126,7 +149,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/atom.vim">atom</a><br>
+          <span class="iframe_title">atom</span>&mdash;
+          <a class="frames" href="colorschemes/atom.vim">Download</a> &mdash;
+          <a class="iframe" href="python/atom.html">Preview</a><br/>
           <iframe src="python/atom.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -137,7 +162,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/autumn.vim">autumn</a><br>
+          <span class="iframe_title">autumn</span>&mdash;
+          <a class="frames" href="colorschemes/autumn.vim">Download</a> &mdash;
+          <a class="iframe" href="python/autumn.html">Preview</a><br/>
           <iframe src="python/autumn.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -148,7 +175,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/autumnleaf.vim">autumnleaf</a><br>
+          <span class="iframe_title">autumnleaf</span>&mdash;
+          <a class="frames" href="colorschemes/autumnleaf.vim">Download</a> &mdash;
+          <a class="iframe" href="python/autumnleaf.html">Preview</a><br/>
           <iframe src="python/autumnleaf.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -163,7 +192,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/bclear.vim">bclear</a><br>
+          <span class="iframe_title">bclear</span>&mdash;
+          <a class="frames" href="colorschemes/bclear.vim">Download</a> &mdash;
+          <a class="iframe" href="python/bclear.html">Preview</a><br/>
           <iframe src="python/bclear.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -174,7 +205,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/bespin.vim">bespin</a><br>
+          <span class="iframe_title">bespin</span>&mdash;
+          <a class="frames" href="colorschemes/bespin.vim">Download</a> &mdash;
+          <a class="iframe" href="python/bespin.html">Preview</a><br/>
           <iframe src="python/bespin.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -185,7 +218,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/blackdust.vim">blackdust</a><br>
+          <span class="iframe_title">blackdust</span>&mdash;
+          <a class="frames" href="colorschemes/blackdust.vim">Download</a> &mdash;
+          <a class="iframe" href="python/blackdust.html">Preview</a><br/>
           <iframe src="python/blackdust.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -200,7 +235,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/blacksea.vim">blacksea</a><br>
+          <span class="iframe_title">blacksea</span>&mdash;
+          <a class="frames" href="colorschemes/blacksea.vim">Download</a> &mdash;
+          <a class="iframe" href="python/blacksea.html">Preview</a><br/>
           <iframe src="python/blacksea.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -211,7 +248,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/bluegreen.vim">bluegreen</a><br>
+          <span class="iframe_title">bluegreen</span>&mdash;
+          <a class="frames" href="colorschemes/bluegreen.vim">Download</a> &mdash;
+          <a class="iframe" href="python/bluegreen.html">Preview</a><br/>
           <iframe src="python/bluegreen.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -222,7 +261,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/breeze.vim">breeze</a><br>
+          <span class="iframe_title">breeze</span>&mdash;
+          <a class="frames" href="colorschemes/breeze.vim">Download</a> &mdash;
+          <a class="iframe" href="python/breeze.html">Preview</a><br/>
           <iframe src="python/breeze.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -237,7 +278,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/brookstream.vim">brookstream</a><br>
+          <span class="iframe_title">brookstream</span>&mdash;
+          <a class="frames" href="colorschemes/brookstream.vim">Download</a> &mdash;
+          <a class="iframe" href="python/brookstream.html">Preview</a><br/>
           <iframe src="python/brookstream.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -248,7 +291,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/BusyBee.vim">BusyBee</a><br>
+          <span class="iframe_title">BusyBee</span>&mdash;
+          <a class="frames" href="colorschemes/BusyBee.vim">Download</a> &mdash;
+          <a class="iframe" href="python/BusyBee.html">Preview</a><br/>
           <iframe src="python/BusyBee.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -259,7 +304,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/calmar256-dark.vim">calmar256-dark</a><br>
+          <span class="iframe_title">calmar256-dark</span>&mdash;
+          <a class="frames" href="colorschemes/calmar256-dark.vim">Download</a> &mdash;
+          <a class="iframe" href="python/calmar256-dark.html">Preview</a><br/>
           <iframe src="python/calmar256-dark.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -274,7 +321,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/calmar256-light.vim">calmar256-light</a><br>
+          <span class="iframe_title">calmar256-light</span>&mdash;
+          <a class="frames" href="colorschemes/calmar256-light.vim">Download</a> &mdash;
+          <a class="iframe" href="python/calmar256-light.html">Preview</a><br/>
           <iframe src="python/calmar256-light.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -285,7 +334,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/camo.vim">camo</a><br>
+          <span class="iframe_title">camo</span>&mdash;
+          <a class="frames" href="colorschemes/camo.vim">Download</a> &mdash;
+          <a class="iframe" href="python/camo.html">Preview</a><br/>
           <iframe src="python/camo.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -296,7 +347,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/candy.vim">candy</a><br>
+          <span class="iframe_title">candy</span>&mdash;
+          <a class="frames" href="colorschemes/candy.vim">Download</a> &mdash;
+          <a class="iframe" href="python/candy.html">Preview</a><br/>
           <iframe src="python/candy.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -311,7 +364,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/candycode.vim">candycode</a><br>
+          <span class="iframe_title">candycode</span>&mdash;
+          <a class="frames" href="colorschemes/candycode.vim">Download</a> &mdash;
+          <a class="iframe" href="python/candycode.html">Preview</a><br/>
           <iframe src="python/candycode.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -322,7 +377,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/chocolateliquor.vim">chocolateliquor</a><br>
+          <span class="iframe_title">chocolateliquor</span>&mdash;
+          <a class="frames" href="colorschemes/chocolateliquor.vim">Download</a> &mdash;
+          <a class="iframe" href="python/chocolateliquor.html">Preview</a><br/>
           <iframe src="python/chocolateliquor.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -333,7 +390,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/clarity.vim">clarity</a><br>
+          <span class="iframe_title">clarity</span>&mdash;
+          <a class="frames" href="colorschemes/clarity.vim">Download</a> &mdash;
+          <a class="iframe" href="python/clarity.html">Preview</a><br/>
           <iframe src="python/clarity.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -348,7 +407,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/corn.vim">corn</a><br>
+          <span class="iframe_title">corn</span>&mdash;
+          <a class="frames" href="colorschemes/corn.vim">Download</a> &mdash;
+          <a class="iframe" href="python/corn.html">Preview</a><br/>
           <iframe src="python/corn.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -359,7 +420,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/darkblue2.vim">darkblue2</a><br>
+          <span class="iframe_title">darkblue2</span>&mdash;
+          <a class="frames" href="colorschemes/darkblue2.vim">Download</a> &mdash;
+          <a class="iframe" href="python/darkblue2.html">Preview</a><br/>
           <iframe src="python/darkblue2.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -370,7 +433,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/darkbone.vim">darkbone</a><br>
+          <span class="iframe_title">darkbone</span>&mdash;
+          <a class="frames" href="colorschemes/darkbone.vim">Download</a> &mdash;
+          <a class="iframe" href="python/darkbone.html">Preview</a><br/>
           <iframe src="python/darkbone.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -385,7 +450,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/darkspectrum.vim">darkspectrum</a><br>
+          <span class="iframe_title">darkspectrum</span>&mdash;
+          <a class="frames" href="colorschemes/darkspectrum.vim">Download</a> &mdash;
+          <a class="iframe" href="python/darkspectrum.html">Preview</a><br/>
           <iframe src="python/darkspectrum.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -396,7 +463,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/darkZ.vim">darkZ</a><br>
+          <span class="iframe_title">darkZ</span>&mdash;
+          <a class="frames" href="colorschemes/darkZ.vim">Download</a> &mdash;
+          <a class="iframe" href="python/darkZ.html">Preview</a><br/>
           <iframe src="python/darkZ.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -407,7 +476,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/desert256.vim">desert256</a><br>
+          <span class="iframe_title">desert256</span>&mdash;
+          <a class="frames" href="colorschemes/desert256.vim">Download</a> &mdash;
+          <a class="iframe" href="python/desert256.html">Preview</a><br/>
           <iframe src="python/desert256.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -422,7 +493,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/desertEx.vim">desertEx</a><br>
+          <span class="iframe_title">desertEx</span>&mdash;
+          <a class="frames" href="colorschemes/desertEx.vim">Download</a> &mdash;
+          <a class="iframe" href="python/desertEx.html">Preview</a><br/>
           <iframe src="python/desertEx.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -433,7 +506,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/diablo3.vim">diablo3</a><br>
+          <span class="iframe_title">diablo3</span>&mdash;
+          <a class="frames" href="colorschemes/diablo3.vim">Download</a> &mdash;
+          <a class="iframe" href="python/diablo3.html">Preview</a><br/>
           <iframe src="python/diablo3.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -444,7 +519,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dusk.vim">dusk</a><br>
+          <span class="iframe_title">dusk</span>&mdash;
+          <a class="frames" href="colorschemes/dusk.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dusk.html">Preview</a><br/>
           <iframe src="python/dusk.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -459,7 +536,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dw_blue.vim">dw_blue</a><br>
+          <span class="iframe_title">dw_blue</span>&mdash;
+          <a class="frames" href="colorschemes/dw_blue.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dw_blue.html">Preview</a><br/>
           <iframe src="python/dw_blue.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -470,7 +549,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dw_cyan.vim">dw_cyan</a><br>
+          <span class="iframe_title">dw_cyan</span>&mdash;
+          <a class="frames" href="colorschemes/dw_cyan.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dw_cyan.html">Preview</a><br/>
           <iframe src="python/dw_cyan.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -481,7 +562,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dw_green.vim">dw_green</a><br>
+          <span class="iframe_title">dw_green</span>&mdash;
+          <a class="frames" href="colorschemes/dw_green.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dw_green.html">Preview</a><br/>
           <iframe src="python/dw_green.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -496,7 +579,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dw_orange.vim">dw_orange</a><br>
+          <span class="iframe_title">dw_orange</span>&mdash;
+          <a class="frames" href="colorschemes/dw_orange.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dw_orange.html">Preview</a><br/>
           <iframe src="python/dw_orange.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -507,7 +592,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dw_purple.vim">dw_purple</a><br>
+          <span class="iframe_title">dw_purple</span>&mdash;
+          <a class="frames" href="colorschemes/dw_purple.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dw_purple.html">Preview</a><br/>
           <iframe src="python/dw_purple.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -518,7 +605,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dw_red.vim">dw_red</a><br>
+          <span class="iframe_title">dw_red</span>&mdash;
+          <a class="frames" href="colorschemes/dw_red.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dw_red.html">Preview</a><br/>
           <iframe src="python/dw_red.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -533,7 +622,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/dw_yellow.vim">dw_yellow</a><br>
+          <span class="iframe_title">dw_yellow</span>&mdash;
+          <a class="frames" href="colorschemes/dw_yellow.vim">Download</a> &mdash;
+          <a class="iframe" href="python/dw_yellow.html">Preview</a><br/>
           <iframe src="python/dw_yellow.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -544,7 +635,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/earendel.vim">earendel</a><br>
+          <span class="iframe_title">earendel</span>&mdash;
+          <a class="frames" href="colorschemes/earendel.vim">Download</a> &mdash;
+          <a class="iframe" href="python/earendel.html">Preview</a><br/>
           <iframe src="python/earendel.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -555,7 +648,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/earthburn.vim">earthburn</a><br>
+          <span class="iframe_title">earthburn</span>&mdash;
+          <a class="frames" href="colorschemes/earthburn.vim">Download</a> &mdash;
+          <a class="iframe" href="python/earthburn.html">Preview</a><br/>
           <iframe src="python/earthburn.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -570,7 +665,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/eclipse.vim">eclipse</a><br>
+          <span class="iframe_title">eclipse</span>&mdash;
+          <a class="frames" href="colorschemes/eclipse.vim">Download</a> &mdash;
+          <a class="iframe" href="python/eclipse.html">Preview</a><br/>
           <iframe src="python/eclipse.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -581,7 +678,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/ekvoli.vim">ekvoli</a><br>
+          <span class="iframe_title">ekvoli</span>&mdash;
+          <a class="frames" href="colorschemes/ekvoli.vim">Download</a> &mdash;
+          <a class="iframe" href="python/ekvoli.html">Preview</a><br/>
           <iframe src="python/ekvoli.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -592,7 +691,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/fine_blue.vim">fine_blue</a><br>
+          <span class="iframe_title">fine_blue</span>&mdash;
+          <a class="frames" href="colorschemes/fine_blue.vim">Download</a> &mdash;
+          <a class="iframe" href="python/fine_blue.html">Preview</a><br/>
           <iframe src="python/fine_blue.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -607,7 +708,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/fine_blue2.vim">fine_blue2</a><br>
+          <span class="iframe_title">fine_blue2</span>&mdash;
+          <a class="frames" href="colorschemes/fine_blue2.vim">Download</a> &mdash;
+          <a class="iframe" href="python/fine_blue2.html">Preview</a><br/>
           <iframe src="python/fine_blue2.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -618,7 +721,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/fnaqevan.vim">fnaqevan</a><br>
+          <span class="iframe_title">fnaqevan</span>&mdash;
+          <a class="frames" href="colorschemes/fnaqevan.vim">Download</a> &mdash;
+          <a class="iframe" href="python/fnaqevan.html">Preview</a><br/>
           <iframe src="python/fnaqevan.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -629,7 +734,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/fog.vim">fog</a><br>
+          <span class="iframe_title">fog</span>&mdash;
+          <a class="frames" href="colorschemes/fog.vim">Download</a> &mdash;
+          <a class="iframe" href="python/fog.html">Preview</a><br/>
           <iframe src="python/fog.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -644,7 +751,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/freya.vim">freya</a><br>
+          <span class="iframe_title">freya</span>&mdash;
+          <a class="frames" href="colorschemes/freya.vim">Download</a> &mdash;
+          <a class="iframe" href="python/freya.html">Preview</a><br/>
           <iframe src="python/freya.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -655,7 +764,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/fruit.vim">fruit</a><br>
+          <span class="iframe_title">fruit</span>&mdash;
+          <a class="frames" href="colorschemes/fruit.vim">Download</a> &mdash;
+          <a class="iframe" href="python/fruit.html">Preview</a><br/>
           <iframe src="python/fruit.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -666,7 +777,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/fruity.vim">fruity</a><br>
+          <span class="iframe_title">fruity</span>&mdash;
+          <a class="frames" href="colorschemes/fruity.vim">Download</a> &mdash;
+          <a class="iframe" href="python/fruity.html">Preview</a><br/>
           <iframe src="python/fruity.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -681,7 +794,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/github.vim">github</a><br>
+          <span class="iframe_title">github</span>&mdash;
+          <a class="frames" href="colorschemes/github.vim">Download</a> &mdash;
+          <a class="iframe" href="python/github.html">Preview</a><br/>
           <iframe src="python/github.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -692,7 +807,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/golden.vim">golden</a><br>
+          <span class="iframe_title">golden</span>&mdash;
+          <a class="frames" href="colorschemes/golden.vim">Download</a> &mdash;
+          <a class="iframe" href="python/golden.html">Preview</a><br/>
           <iframe src="python/golden.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -703,7 +820,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/guardian.vim">guardian</a><br>
+          <span class="iframe_title">guardian</span>&mdash;
+          <a class="frames" href="colorschemes/guardian.vim">Download</a> &mdash;
+          <a class="iframe" href="python/guardian.html">Preview</a><br/>
           <iframe src="python/guardian.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -718,7 +837,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/habilight.vim">habilight</a><br>
+          <span class="iframe_title">habilight</span>&mdash;
+          <a class="frames" href="colorschemes/habilight.vim">Download</a> &mdash;
+          <a class="iframe" href="python/habilight.html">Preview</a><br/>
           <iframe src="python/habilight.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -729,7 +850,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/herald.vim">herald</a><br>
+          <span class="iframe_title">herald</span>&mdash;
+          <a class="frames" href="colorschemes/herald.vim">Download</a> &mdash;
+          <a class="iframe" href="python/herald.html">Preview</a><br/>
           <iframe src="python/herald.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -740,7 +863,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/impact.vim">impact</a><br>
+          <span class="iframe_title">impact</span>&mdash;
+          <a class="frames" href="colorschemes/impact.vim">Download</a> &mdash;
+          <a class="iframe" href="python/impact.html">Preview</a><br/>
           <iframe src="python/impact.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -755,7 +880,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/inkpot.vim">inkpot</a><br>
+          <span class="iframe_title">inkpot</span>&mdash;
+          <a class="frames" href="colorschemes/inkpot.vim">Download</a> &mdash;
+          <a class="iframe" href="python/inkpot.html">Preview</a><br/>
           <iframe src="python/inkpot.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -766,7 +893,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/ironman.vim">ironman</a><br>
+          <span class="iframe_title">ironman</span>&mdash;
+          <a class="frames" href="colorschemes/ironman.vim">Download</a> &mdash;
+          <a class="iframe" href="python/ironman.html">Preview</a><br/>
           <iframe src="python/ironman.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -777,7 +906,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/jammy.vim">jammy</a><br>
+          <span class="iframe_title">jammy</span>&mdash;
+          <a class="frames" href="colorschemes/jammy.vim">Download</a> &mdash;
+          <a class="iframe" href="python/jammy.html">Preview</a><br/>
           <iframe src="python/jammy.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -792,7 +923,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/jellybeans+.vim">jellybeans+</a><br>
+          <span class="iframe_title">jellybeans+</span>&mdash;
+          <a class="frames" href="colorschemes/jellybeans+.vim">Download</a> &mdash;
+          <a class="iframe" href="python/jellybeans+.html">Preview</a><br/>
           <iframe src="python/jellybeans+.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -803,7 +936,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/jellybeans.vim">jellybeans</a><br>
+          <span class="iframe_title">jellybeans</span>&mdash;
+          <a class="frames" href="colorschemes/jellybeans.vim">Download</a> &mdash;
+          <a class="iframe" href="python/jellybeans.html">Preview</a><br/>
           <iframe src="python/jellybeans.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -814,7 +949,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/kellys.vim">kellys</a><br>
+          <span class="iframe_title">kellys</span>&mdash;
+          <a class="frames" href="colorschemes/kellys.vim">Download</a> &mdash;
+          <a class="iframe" href="python/kellys.html">Preview</a><br/>
           <iframe src="python/kellys.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -829,7 +966,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/leo.vim">leo</a><br>
+          <span class="iframe_title">leo</span>&mdash;
+          <a class="frames" href="colorschemes/leo.vim">Download</a> &mdash;
+          <a class="iframe" href="python/leo.html">Preview</a><br/>
           <iframe src="python/leo.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -840,7 +979,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/lettuce.vim">lettuce</a><br>
+          <span class="iframe_title">lettuce</span>&mdash;
+          <a class="frames" href="colorschemes/lettuce.vim">Download</a> &mdash;
+          <a class="iframe" href="python/lettuce.html">Preview</a><br/>
           <iframe src="python/lettuce.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -851,7 +992,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/liquidcarbon.vim">liquidcarbon</a><br>
+          <span class="iframe_title">liquidcarbon</span>&mdash;
+          <a class="frames" href="colorschemes/liquidcarbon.vim">Download</a> &mdash;
+          <a class="iframe" href="python/liquidcarbon.html">Preview</a><br/>
           <iframe src="python/liquidcarbon.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -866,7 +1009,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/lucius.vim">lucius</a><br>
+          <span class="iframe_title">lucius</span>&mdash;
+          <a class="frames" href="colorschemes/lucius.vim">Download</a> &mdash;
+          <a class="iframe" href="python/lucius.html">Preview</a><br/>
           <iframe src="python/lucius.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -877,7 +1022,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/marklar.vim">marklar</a><br>
+          <span class="iframe_title">marklar</span>&mdash;
+          <a class="frames" href="colorschemes/marklar.vim">Download</a> &mdash;
+          <a class="iframe" href="python/marklar.html">Preview</a><br/>
           <iframe src="python/marklar.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -888,7 +1035,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/martin_krischik.vim">martin_krischik</a><br>
+          <span class="iframe_title">martin_krischik</span>&mdash;
+          <a class="frames" href="colorschemes/martin_krischik.vim">Download</a> &mdash;
+          <a class="iframe" href="python/martin_krischik.html">Preview</a><br/>
           <iframe src="python/martin_krischik.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -903,7 +1052,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/matrix.vim">matrix</a><br>
+          <span class="iframe_title">matrix</span>&mdash;
+          <a class="frames" href="colorschemes/matrix.vim">Download</a> &mdash;
+          <a class="iframe" href="python/matrix.html">Preview</a><br/>
           <iframe src="python/matrix.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -914,7 +1065,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/mellow.vim">mellow</a><br>
+          <span class="iframe_title">mellow</span>&mdash;
+          <a class="frames" href="colorschemes/mellow.vim">Download</a> &mdash;
+          <a class="iframe" href="python/mellow.html">Preview</a><br/>
           <iframe src="python/mellow.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -925,7 +1078,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/mirodark.vim">mirodark</a><br>
+          <span class="iframe_title">mirodark</span>&mdash;
+          <a class="frames" href="colorschemes/mirodark.vim">Download</a> &mdash;
+          <a class="iframe" href="python/mirodark.html">Preview</a><br/>
           <iframe src="python/mirodark.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -940,7 +1095,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/molokai.vim">molokai</a><br>
+          <span class="iframe_title">molokai</span>&mdash;
+          <a class="frames" href="colorschemes/molokai.vim">Download</a> &mdash;
+          <a class="iframe" href="python/molokai.html">Preview</a><br/>
           <iframe src="python/molokai.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -951,7 +1108,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/moria.vim">moria</a><br>
+          <span class="iframe_title">moria</span>&mdash;
+          <a class="frames" href="colorschemes/moria.vim">Download</a> &mdash;
+          <a class="iframe" href="python/moria.html">Preview</a><br/>
           <iframe src="python/moria.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -962,7 +1121,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/moss.vim">moss</a><br>
+          <span class="iframe_title">moss</span>&mdash;
+          <a class="frames" href="colorschemes/moss.vim">Download</a> &mdash;
+          <a class="iframe" href="python/moss.html">Preview</a><br/>
           <iframe src="python/moss.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -977,7 +1138,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/motus.vim">motus</a><br>
+          <span class="iframe_title">motus</span>&mdash;
+          <a class="frames" href="colorschemes/motus.vim">Download</a> &mdash;
+          <a class="iframe" href="python/motus.html">Preview</a><br/>
           <iframe src="python/motus.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -988,7 +1151,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/mustang.vim">mustang</a><br>
+          <span class="iframe_title">mustang</span>&mdash;
+          <a class="frames" href="colorschemes/mustang.vim">Download</a> &mdash;
+          <a class="iframe" href="python/mustang.html">Preview</a><br/>
           <iframe src="python/mustang.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -999,7 +1164,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/navajo-night.vim">navajo-night</a><br>
+          <span class="iframe_title">navajo-night</span>&mdash;
+          <a class="frames" href="colorschemes/navajo-night.vim">Download</a> &mdash;
+          <a class="iframe" href="python/navajo-night.html">Preview</a><br/>
           <iframe src="python/navajo-night.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1014,7 +1181,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/navajo.vim">navajo</a><br>
+          <span class="iframe_title">navajo</span>&mdash;
+          <a class="frames" href="colorschemes/navajo.vim">Download</a> &mdash;
+          <a class="iframe" href="python/navajo.html">Preview</a><br/>
           <iframe src="python/navajo.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1025,7 +1194,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/neon.vim">neon</a><br>
+          <span class="iframe_title">neon</span>&mdash;
+          <a class="frames" href="colorschemes/neon.vim">Download</a> &mdash;
+          <a class="iframe" href="python/neon.html">Preview</a><br/>
           <iframe src="python/neon.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1036,7 +1207,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/neverland-darker.vim">neverland-darker</a><br>
+          <span class="iframe_title">neverland-darker</span>&mdash;
+          <a class="frames" href="colorschemes/neverland-darker.vim">Download</a> &mdash;
+          <a class="iframe" href="python/neverland-darker.html">Preview</a><br/>
           <iframe src="python/neverland-darker.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1051,7 +1224,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/neverland.vim">neverland</a><br>
+          <span class="iframe_title">neverland</span>&mdash;
+          <a class="frames" href="colorschemes/neverland.vim">Download</a> &mdash;
+          <a class="iframe" href="python/neverland.html">Preview</a><br/>
           <iframe src="python/neverland.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1062,7 +1237,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/neverland2-darker.vim">neverland2-darker</a><br>
+          <span class="iframe_title">neverland2-darker</span>&mdash;
+          <a class="frames" href="colorschemes/neverland2-darker.vim">Download</a> &mdash;
+          <a class="iframe" href="python/neverland2-darker.html">Preview</a><br/>
           <iframe src="python/neverland2-darker.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1073,7 +1250,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/neverland2.vim">neverland2</a><br>
+          <span class="iframe_title">neverland2</span>&mdash;
+          <a class="frames" href="colorschemes/neverland2.vim">Download</a> &mdash;
+          <a class="iframe" href="python/neverland2.html">Preview</a><br/>
           <iframe src="python/neverland2.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1088,7 +1267,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/neverness.vim">neverness</a><br>
+          <span class="iframe_title">neverness</span>&mdash;
+          <a class="frames" href="colorschemes/neverness.vim">Download</a> &mdash;
+          <a class="iframe" href="python/neverness.html">Preview</a><br/>
           <iframe src="python/neverness.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1099,7 +1280,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/night.vim">night</a><br>
+          <span class="iframe_title">night</span>&mdash;
+          <a class="frames" href="colorschemes/night.vim">Download</a> &mdash;
+          <a class="iframe" href="python/night.html">Preview</a><br/>
           <iframe src="python/night.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1110,7 +1293,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/nightshimmer.vim">nightshimmer</a><br>
+          <span class="iframe_title">nightshimmer</span>&mdash;
+          <a class="frames" href="colorschemes/nightshimmer.vim">Download</a> &mdash;
+          <a class="iframe" href="python/nightshimmer.html">Preview</a><br/>
           <iframe src="python/nightshimmer.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1125,7 +1310,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/no_quarter.vim">no_quarter</a><br>
+          <span class="iframe_title">no_quarter</span>&mdash;
+          <a class="frames" href="colorschemes/no_quarter.vim">Download</a> &mdash;
+          <a class="iframe" href="python/no_quarter.html">Preview</a><br/>
           <iframe src="python/no_quarter.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1136,7 +1323,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/northland.vim">northland</a><br>
+          <span class="iframe_title">northland</span>&mdash;
+          <a class="frames" href="colorschemes/northland.vim">Download</a> &mdash;
+          <a class="iframe" href="python/northland.html">Preview</a><br/>
           <iframe src="python/northland.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1147,7 +1336,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/nuvola.vim">nuvola</a><br>
+          <span class="iframe_title">nuvola</span>&mdash;
+          <a class="frames" href="colorschemes/nuvola.vim">Download</a> &mdash;
+          <a class="iframe" href="python/nuvola.html">Preview</a><br/>
           <iframe src="python/nuvola.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1162,7 +1353,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/obsidian.vim">obsidian</a><br>
+          <span class="iframe_title">obsidian</span>&mdash;
+          <a class="frames" href="colorschemes/obsidian.vim">Download</a> &mdash;
+          <a class="iframe" href="python/obsidian.html">Preview</a><br/>
           <iframe src="python/obsidian.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1173,7 +1366,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/oceanblack.vim">oceanblack</a><br>
+          <span class="iframe_title">oceanblack</span>&mdash;
+          <a class="frames" href="colorschemes/oceanblack.vim">Download</a> &mdash;
+          <a class="iframe" href="python/oceanblack.html">Preview</a><br/>
           <iframe src="python/oceanblack.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1184,7 +1379,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/oceandeep.vim">oceandeep</a><br>
+          <span class="iframe_title">oceandeep</span>&mdash;
+          <a class="frames" href="colorschemes/oceandeep.vim">Download</a> &mdash;
+          <a class="iframe" href="python/oceandeep.html">Preview</a><br/>
           <iframe src="python/oceandeep.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1199,7 +1396,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/oceanlight.vim">oceanlight</a><br>
+          <span class="iframe_title">oceanlight</span>&mdash;
+          <a class="frames" href="colorschemes/oceanlight.vim">Download</a> &mdash;
+          <a class="iframe" href="python/oceanlight.html">Preview</a><br/>
           <iframe src="python/oceanlight.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1210,7 +1409,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/olive.vim">olive</a><br>
+          <span class="iframe_title">olive</span>&mdash;
+          <a class="frames" href="colorschemes/olive.vim">Download</a> &mdash;
+          <a class="iframe" href="python/olive.html">Preview</a><br/>
           <iframe src="python/olive.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1221,7 +1422,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/papayawhip.vim">papayawhip</a><br>
+          <span class="iframe_title">papayawhip</span>&mdash;
+          <a class="frames" href="colorschemes/papayawhip.vim">Download</a> &mdash;
+          <a class="iframe" href="python/papayawhip.html">Preview</a><br/>
           <iframe src="python/papayawhip.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1236,7 +1439,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/peaksea.vim">peaksea</a><br>
+          <span class="iframe_title">peaksea</span>&mdash;
+          <a class="frames" href="colorschemes/peaksea.vim">Download</a> &mdash;
+          <a class="iframe" href="python/peaksea.html">Preview</a><br/>
           <iframe src="python/peaksea.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1247,7 +1452,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/pigraph.vim">pigraph</a><br>
+          <span class="iframe_title">pigraph</span>&mdash;
+          <a class="frames" href="colorschemes/pigraph.vim">Download</a> &mdash;
+          <a class="iframe" href="python/pigraph.html">Preview</a><br/>
           <iframe src="python/pigraph.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1258,7 +1465,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/print_bw.vim">print_bw</a><br>
+          <span class="iframe_title">print_bw</span>&mdash;
+          <a class="frames" href="colorschemes/print_bw.vim">Download</a> &mdash;
+          <a class="iframe" href="python/print_bw.html">Preview</a><br/>
           <iframe src="python/print_bw.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1273,7 +1482,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/pyte.vim">pyte</a><br>
+          <span class="iframe_title">pyte</span>&mdash;
+          <a class="frames" href="colorschemes/pyte.vim">Download</a> &mdash;
+          <a class="iframe" href="python/pyte.html">Preview</a><br/>
           <iframe src="python/pyte.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1284,7 +1495,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/railscasts+.vim">railscasts+</a><br>
+          <span class="iframe_title">railscasts+</span>&mdash;
+          <a class="frames" href="colorschemes/railscasts+.vim">Download</a> &mdash;
+          <a class="iframe" href="python/railscasts+.html">Preview</a><br/>
           <iframe src="python/railscasts+.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1295,7 +1508,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/railscasts.vim">railscasts</a><br>
+          <span class="iframe_title">railscasts</span>&mdash;
+          <a class="frames" href="colorschemes/railscasts.vim">Download</a> &mdash;
+          <a class="iframe" href="python/railscasts.html">Preview</a><br/>
           <iframe src="python/railscasts.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1310,7 +1525,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/railscasts2.vim">railscasts2</a><br>
+          <span class="iframe_title">railscasts2</span>&mdash;
+          <a class="frames" href="colorschemes/railscasts2.vim">Download</a> &mdash;
+          <a class="iframe" href="python/railscasts2.html">Preview</a><br/>
           <iframe src="python/railscasts2.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1321,7 +1538,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/rdark.vim">rdark</a><br>
+          <span class="iframe_title">rdark</span>&mdash;
+          <a class="frames" href="colorschemes/rdark.vim">Download</a> &mdash;
+          <a class="iframe" href="python/rdark.html">Preview</a><br/>
           <iframe src="python/rdark.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1332,7 +1551,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/relaxedgreen.vim">relaxedgreen</a><br>
+          <span class="iframe_title">relaxedgreen</span>&mdash;
+          <a class="frames" href="colorschemes/relaxedgreen.vim">Download</a> &mdash;
+          <a class="iframe" href="python/relaxedgreen.html">Preview</a><br/>
           <iframe src="python/relaxedgreen.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1347,7 +1568,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/revolutions.vim">revolutions</a><br>
+          <span class="iframe_title">revolutions</span>&mdash;
+          <a class="frames" href="colorschemes/revolutions.vim">Download</a> &mdash;
+          <a class="iframe" href="python/revolutions.html">Preview</a><br/>
           <iframe src="python/revolutions.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1358,7 +1581,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/robinhood.vim">robinhood</a><br>
+          <span class="iframe_title">robinhood</span>&mdash;
+          <a class="frames" href="colorschemes/robinhood.vim">Download</a> &mdash;
+          <a class="iframe" href="python/robinhood.html">Preview</a><br/>
           <iframe src="python/robinhood.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1369,7 +1594,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/rootwater.vim">rootwater</a><br>
+          <span class="iframe_title">rootwater</span>&mdash;
+          <a class="frames" href="colorschemes/rootwater.vim">Download</a> &mdash;
+          <a class="iframe" href="python/rootwater.html">Preview</a><br/>
           <iframe src="python/rootwater.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1384,7 +1611,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/rubyblue.vim">rubyblue</a><br>
+          <span class="iframe_title">rubyblue</span>&mdash;
+          <a class="frames" href="colorschemes/rubyblue.vim">Download</a> &mdash;
+          <a class="iframe" href="python/rubyblue.html">Preview</a><br/>
           <iframe src="python/rubyblue.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1395,7 +1624,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/satori.vim">satori</a><br>
+          <span class="iframe_title">satori</span>&mdash;
+          <a class="frames" href="colorschemes/satori.vim">Download</a> &mdash;
+          <a class="iframe" href="python/satori.html">Preview</a><br/>
           <iframe src="python/satori.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1406,7 +1637,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/sea.vim">sea</a><br>
+          <span class="iframe_title">sea</span>&mdash;
+          <a class="frames" href="colorschemes/sea.vim">Download</a> &mdash;
+          <a class="iframe" href="python/sea.html">Preview</a><br/>
           <iframe src="python/sea.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1421,7 +1654,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/settlemyer.vim">settlemyer</a><br>
+          <span class="iframe_title">settlemyer</span>&mdash;
+          <a class="frames" href="colorschemes/settlemyer.vim">Download</a> &mdash;
+          <a class="iframe" href="python/settlemyer.html">Preview</a><br/>
           <iframe src="python/settlemyer.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1432,7 +1667,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/shady.vim">shady</a><br>
+          <span class="iframe_title">shady</span>&mdash;
+          <a class="frames" href="colorschemes/shady.vim">Download</a> &mdash;
+          <a class="iframe" href="python/shady.html">Preview</a><br/>
           <iframe src="python/shady.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1443,7 +1680,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/sienna.vim">sienna</a><br>
+          <span class="iframe_title">sienna</span>&mdash;
+          <a class="frames" href="colorschemes/sienna.vim">Download</a> &mdash;
+          <a class="iframe" href="python/sienna.html">Preview</a><br/>
           <iframe src="python/sienna.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1458,7 +1697,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/silent.vim">silent</a><br>
+          <span class="iframe_title">silent</span>&mdash;
+          <a class="frames" href="colorschemes/silent.vim">Download</a> &mdash;
+          <a class="iframe" href="python/silent.html">Preview</a><br/>
           <iframe src="python/silent.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1469,7 +1710,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/simpleandfriendly.vim">simpleandfriendly</a><br>
+          <span class="iframe_title">simpleandfriendly</span>&mdash;
+          <a class="frames" href="colorschemes/simpleandfriendly.vim">Download</a> &mdash;
+          <a class="iframe" href="python/simpleandfriendly.html">Preview</a><br/>
           <iframe src="python/simpleandfriendly.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1480,7 +1723,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/softblue.vim">softblue</a><br>
+          <span class="iframe_title">softblue</span>&mdash;
+          <a class="frames" href="colorschemes/softblue.vim">Download</a> &mdash;
+          <a class="iframe" href="python/softblue.html">Preview</a><br/>
           <iframe src="python/softblue.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1495,7 +1740,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/sorcerer.vim">sorcerer</a><br>
+          <span class="iframe_title">sorcerer</span>&mdash;
+          <a class="frames" href="colorschemes/sorcerer.vim">Download</a> &mdash;
+          <a class="iframe" href="python/sorcerer.html">Preview</a><br/>
           <iframe src="python/sorcerer.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1506,7 +1753,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/soso.vim">soso</a><br>
+          <span class="iframe_title">soso</span>&mdash;
+          <a class="frames" href="colorschemes/soso.vim">Download</a> &mdash;
+          <a class="iframe" href="python/soso.html">Preview</a><br/>
           <iframe src="python/soso.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1517,7 +1766,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/southwest-fog.vim">southwest-fog</a><br>
+          <span class="iframe_title">southwest-fog</span>&mdash;
+          <a class="frames" href="colorschemes/southwest-fog.vim">Download</a> &mdash;
+          <a class="iframe" href="python/southwest-fog.html">Preview</a><br/>
           <iframe src="python/southwest-fog.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1532,7 +1783,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/spring.vim">spring</a><br>
+          <span class="iframe_title">spring</span>&mdash;
+          <a class="frames" href="colorschemes/spring.vim">Download</a> &mdash;
+          <a class="iframe" href="python/spring.html">Preview</a><br/>
           <iframe src="python/spring.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1543,7 +1796,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/summerfruit256.vim">summerfruit256</a><br>
+          <span class="iframe_title">summerfruit256</span>&mdash;
+          <a class="frames" href="colorschemes/summerfruit256.vim">Download</a> &mdash;
+          <a class="iframe" href="python/summerfruit256.html">Preview</a><br/>
           <iframe src="python/summerfruit256.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1554,7 +1809,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/synic.vim">synic</a><br>
+          <span class="iframe_title">synic</span>&mdash;
+          <a class="frames" href="colorschemes/synic.vim">Download</a> &mdash;
+          <a class="iframe" href="python/synic.html">Preview</a><br/>
           <iframe src="python/synic.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1569,7 +1826,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/tabula.vim">tabula</a><br>
+          <span class="iframe_title">tabula</span>&mdash;
+          <a class="frames" href="colorschemes/tabula.vim">Download</a> &mdash;
+          <a class="iframe" href="python/tabula.html">Preview</a><br/>
           <iframe src="python/tabula.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1580,7 +1839,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/tango.vim">tango</a><br>
+          <span class="iframe_title">tango</span>&mdash;
+          <a class="frames" href="colorschemes/tango.vim">Download</a> &mdash;
+          <a class="iframe" href="python/tango.html">Preview</a><br/>
           <iframe src="python/tango.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1591,7 +1852,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/tango2.vim">tango2</a><br>
+          <span class="iframe_title">tango2</span>&mdash;
+          <a class="frames" href="colorschemes/tango2.vim">Download</a> &mdash;
+          <a class="iframe" href="python/tango2.html">Preview</a><br/>
           <iframe src="python/tango2.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1606,7 +1869,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/taqua.vim">taqua</a><br>
+          <span class="iframe_title">taqua</span>&mdash;
+          <a class="frames" href="colorschemes/taqua.vim">Download</a> &mdash;
+          <a class="iframe" href="python/taqua.html">Preview</a><br/>
           <iframe src="python/taqua.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1617,7 +1882,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/tcsoft.vim">tcsoft</a><br>
+          <span class="iframe_title">tcsoft</span>&mdash;
+          <a class="frames" href="colorschemes/tcsoft.vim">Download</a> &mdash;
+          <a class="iframe" href="python/tcsoft.html">Preview</a><br/>
           <iframe src="python/tcsoft.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1628,7 +1895,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/tir_black.vim">tir_black</a><br>
+          <span class="iframe_title">tir_black</span>&mdash;
+          <a class="frames" href="colorschemes/tir_black.vim">Download</a> &mdash;
+          <a class="iframe" href="python/tir_black.html">Preview</a><br/>
           <iframe src="python/tir_black.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1643,7 +1912,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/tolerable.vim">tolerable</a><br>
+          <span class="iframe_title">tolerable</span>&mdash;
+          <a class="frames" href="colorschemes/tolerable.vim">Download</a> &mdash;
+          <a class="iframe" href="python/tolerable.html">Preview</a><br/>
           <iframe src="python/tolerable.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1654,7 +1925,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/Tomorrow-Night-Blue.vim">Tomorrow-Night-Blue</a><br>
+          <span class="iframe_title">Tomorrow-Night-Blue</span>&mdash;
+          <a class="frames" href="colorschemes/Tomorrow-Night-Blue.vim">Download</a> &mdash;
+          <a class="iframe" href="python/Tomorrow-Night-Blue.html">Preview</a><br/>
           <iframe src="python/Tomorrow-Night-Blue.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1665,7 +1938,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/Tomorrow-Night-Bright.vim">Tomorrow-Night-Bright</a><br>
+          <span class="iframe_title">Tomorrow-Night-Bright</span>&mdash;
+          <a class="frames" href="colorschemes/Tomorrow-Night-Bright.vim">Download</a> &mdash;
+          <a class="iframe" href="python/Tomorrow-Night-Bright.html">Preview</a><br/>
           <iframe src="python/Tomorrow-Night-Bright.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1680,7 +1955,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/Tomorrow-Night-Eighties.vim">Tomorrow-Night-Eighties</a><br>
+          <span class="iframe_title">Tomorrow-Night-Eighties</span>&mdash;
+          <a class="frames" href="colorschemes/Tomorrow-Night-Eighties.vim">Download</a> &mdash;
+          <a class="iframe" href="python/Tomorrow-Night-Eighties.html">Preview</a><br/>
           <iframe src="python/Tomorrow-Night-Eighties.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1691,7 +1968,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/Tomorrow-Night.vim">Tomorrow-Night</a><br>
+          <span class="iframe_title">Tomorrow-Night</span>&mdash;
+          <a class="frames" href="colorschemes/Tomorrow-Night.vim">Download</a> &mdash;
+          <a class="iframe" href="python/Tomorrow-Night.html">Preview</a><br/>
           <iframe src="python/Tomorrow-Night.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1702,7 +1981,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/torte.vim">torte</a><br>
+          <span class="iframe_title">torte</span>&mdash;
+          <a class="frames" href="colorschemes/torte.vim">Download</a> &mdash;
+          <a class="iframe" href="python/torte.html">Preview</a><br/>
           <iframe src="python/torte.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1717,7 +1998,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/tutticolori.vim">tutticolori</a><br>
+          <span class="iframe_title">tutticolori</span>&mdash;
+          <a class="frames" href="colorschemes/tutticolori.vim">Download</a> &mdash;
+          <a class="iframe" href="python/tutticolori.html">Preview</a><br/>
           <iframe src="python/tutticolori.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1728,7 +2011,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/twilight.vim">twilight</a><br>
+          <span class="iframe_title">twilight</span>&mdash;
+          <a class="frames" href="colorschemes/twilight.vim">Download</a> &mdash;
+          <a class="iframe" href="python/twilight.html">Preview</a><br/>
           <iframe src="python/twilight.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1739,7 +2024,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/two2tango.vim">two2tango</a><br>
+          <span class="iframe_title">two2tango</span>&mdash;
+          <a class="frames" href="colorschemes/two2tango.vim">Download</a> &mdash;
+          <a class="iframe" href="python/two2tango.html">Preview</a><br/>
           <iframe src="python/two2tango.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1754,7 +2041,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/underwater-mod.vim">underwater-mod</a><br>
+          <span class="iframe_title">underwater-mod</span>&mdash;
+          <a class="frames" href="colorschemes/underwater-mod.vim">Download</a> &mdash;
+          <a class="iframe" href="python/underwater-mod.html">Preview</a><br/>
           <iframe src="python/underwater-mod.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1765,7 +2054,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vc.vim">vc</a><br>
+          <span class="iframe_title">vc</span>&mdash;
+          <a class="frames" href="colorschemes/vc.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vc.html">Preview</a><br/>
           <iframe src="python/vc.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1776,7 +2067,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vibrantink.vim">vibrantink</a><br>
+          <span class="iframe_title">vibrantink</span>&mdash;
+          <a class="frames" href="colorschemes/vibrantink.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vibrantink.html">Preview</a><br/>
           <iframe src="python/vibrantink.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1791,7 +2084,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/Vitamins_Vim_Colorscheme_by_hcalves.vim">Vitamins_Vim_Colorscheme_by_hcalves</a><br>
+          <span class="iframe_title">Vitamins_Vim_Colorscheme_by_hcalves</span>&mdash;
+          <a class="frames" href="colorschemes/Vitamins_Vim_Colorscheme_by_hcalves.vim">Download</a> &mdash;
+          <a class="iframe" href="python/Vitamins_Vim_Colorscheme_by_hcalves.html">Preview</a><br/>
           <iframe src="python/Vitamins_Vim_Colorscheme_by_hcalves.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1802,7 +2097,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vividchalk.vim">vividchalk</a><br>
+          <span class="iframe_title">vividchalk</span>&mdash;
+          <a class="frames" href="colorschemes/vividchalk.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vividchalk.html">Preview</a><br/>
           <iframe src="python/vividchalk.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1813,7 +2110,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vo_dark.vim">vo_dark</a><br>
+          <span class="iframe_title">vo_dark</span>&mdash;
+          <a class="frames" href="colorschemes/vo_dark.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vo_dark.html">Preview</a><br/>
           <iframe src="python/vo_dark.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1828,7 +2127,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vo_dark_09:35:48_2010-12-30.old.vim">vo_dark_09:35:48_2010-12-30.old</a><br>
+          <span class="iframe_title">vo_dark_09:35:48_2010-12-30.old</span>&mdash;
+          <a class="frames" href="colorschemes/vo_dark_09:35:48_2010-12-30.old.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vo_dark_09:35:48_2010-12-30.old.html">Preview</a><br/>
           <iframe src="python/vo_dark_09:35:48_2010-12-30.old.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1839,7 +2140,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vo_light.vim">vo_light</a><br>
+          <span class="iframe_title">vo_light</span>&mdash;
+          <a class="frames" href="colorschemes/vo_light.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vo_light.html">Preview</a><br/>
           <iframe src="python/vo_light.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1850,7 +2153,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vo_light_09:35:48_2010-12-30.old.vim">vo_light_09:35:48_2010-12-30.old</a><br>
+          <span class="iframe_title">vo_light_09:35:48_2010-12-30.old</span>&mdash;
+          <a class="frames" href="colorschemes/vo_light_09:35:48_2010-12-30.old.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vo_light_09:35:48_2010-12-30.old.html">Preview</a><br/>
           <iframe src="python/vo_light_09:35:48_2010-12-30.old.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1865,7 +2170,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/vylight.vim">vylight</a><br>
+          <span class="iframe_title">vylight</span>&mdash;
+          <a class="frames" href="colorschemes/vylight.vim">Download</a> &mdash;
+          <a class="iframe" href="python/vylight.html">Preview</a><br/>
           <iframe src="python/vylight.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1876,7 +2183,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/winter.vim">winter</a><br>
+          <span class="iframe_title">winter</span>&mdash;
+          <a class="frames" href="colorschemes/winter.vim">Download</a> &mdash;
+          <a class="iframe" href="python/winter.html">Preview</a><br/>
           <iframe src="python/winter.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1887,7 +2196,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/wombat.vim">wombat</a><br>
+          <span class="iframe_title">wombat</span>&mdash;
+          <a class="frames" href="colorschemes/wombat.vim">Download</a> &mdash;
+          <a class="iframe" href="python/wombat.html">Preview</a><br/>
           <iframe src="python/wombat.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1902,7 +2213,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/wombat256.vim">wombat256</a><br>
+          <span class="iframe_title">wombat256</span>&mdash;
+          <a class="frames" href="colorschemes/wombat256.vim">Download</a> &mdash;
+          <a class="iframe" href="python/wombat256.html">Preview</a><br/>
           <iframe src="python/wombat256.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1913,7 +2226,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/wood.vim">wood</a><br>
+          <span class="iframe_title">wood</span>&mdash;
+          <a class="frames" href="colorschemes/wood.vim">Download</a> &mdash;
+          <a class="iframe" href="python/wood.html">Preview</a><br/>
           <iframe src="python/wood.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1924,7 +2239,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/wuye.vim">wuye</a><br>
+          <span class="iframe_title">wuye</span>&mdash;
+          <a class="frames" href="colorschemes/wuye.vim">Download</a> &mdash;
+          <a class="iframe" href="python/wuye.html">Preview</a><br/>
           <iframe src="python/wuye.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1939,7 +2256,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/xemacs.vim">xemacs</a><br>
+          <span class="iframe_title">xemacs</span>&mdash;
+          <a class="frames" href="colorschemes/xemacs.vim">Download</a> &mdash;
+          <a class="iframe" href="python/xemacs.html">Preview</a><br/>
           <iframe src="python/xemacs.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1950,7 +2269,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/xoria256.vim">xoria256</a><br>
+          <span class="iframe_title">xoria256</span>&mdash;
+          <a class="frames" href="colorschemes/xoria256.vim">Download</a> &mdash;
+          <a class="iframe" href="python/xoria256.html">Preview</a><br/>
           <iframe src="python/xoria256.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1961,7 +2282,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/zenburn.vim">zenburn</a><br>
+          <span class="iframe_title">zenburn</span>&mdash;
+          <a class="frames" href="colorschemes/zenburn.vim">Download</a> &mdash;
+          <a class="iframe" href="python/zenburn.html">Preview</a><br/>
           <iframe src="python/zenburn.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
@@ -1976,7 +2299,9 @@
         
 
         <td width="33%" height="300px">
-          <a class="frames" href="colorschemes/zmrok.vim">zmrok</a><br>
+          <span class="iframe_title">zmrok</span>&mdash;
+          <a class="frames" href="colorschemes/zmrok.vim">Download</a> &mdash;
+          <a class="iframe" href="python/zmrok.html">Preview</a><br/>
           <iframe src="python/zmrok.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
         </td>
 
