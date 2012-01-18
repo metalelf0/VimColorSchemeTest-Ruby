@@ -40,6 +40,7 @@ What still needs to be done
 
 * Separate light and dark colorschemes
 * Make this work with versions of vim different from MacVim
+* Add the current language name to index pages
 
 Notes
 ----

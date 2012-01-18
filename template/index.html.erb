@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>VIM Color Scheme Test</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-		<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
     <style>
       body { background: White; }
       a {
@@ -18,62 +19,77 @@
       a:hover { color: White; background: #FF9900; }
       a.frames { border: thin dotted #FF9900; }
       a.frames:hover { color: White; background: #FF9900; }
-      td { padding-top: 5px; }
+      .colorscheme-box {
+        padding-top: 35px; 
+        height: 300px;
+      }
     </style>
-  </head>
-  <body>
-    <h1><a href="http://code.google.com/p/vimcolorschemetest/">VIM Color Scheme Test</a> - Ruby</h1>
+
     <script language="javascript">
       function changeHeight(h) {
-        var tds = document.getElementsByTagName("td");
-        for(var i = 0; i < tds.length; i++) { tds[i].setAttribute("height", h + "px"); }
+        $('.colorscheme-box').height(h); 
       }
 
-			$(document).ready(function() {
+      $(document).ready(function() {
           $("a.iframe").fancybox({
-						'width' : 800,
-						'height': 600
+            'width' : 800,
+            'height': 600
           });
-			});
-
+      });
     </script>
-    <ul>
-      <li>This page really requires a modern web browser. Click <a
-        href="http://code.google.com/p/vimcolorschemetest/">here</a> for more information.</li>
-      <li>Do your friends a favor. Link to the <a href="http://code.google.com/p/vimcolorschemetest/">front page</a>
-      instead. Thanks!</li>
-      <li>Useful tip: decrease the text size to see more in each <tt>iframe</tt>.
-      (For example, in Firefox press ctrl-minus and you will see.)</li>
-      <li>Select <tt>iframe</tt> height (in pixels):
-      <input type="radio" name="height" value="100" onclick="changeHeight(100);">100</input>
-      <input type="radio" name="height" value="200" onclick="changeHeight(200);">200</input>
-      <input type="radio" name="height" value="300" onclick="changeHeight(300);" checked>300</input>
-      <input type="radio" name="height" value="400" onclick="changeHeight(400);">400</input>
-      <input type="radio" name="height" value="500" onclick="changeHeight(500);">500</input>
-      <input type="radio" name="height" value="600" onclick="changeHeight(600);">600</input>
-      </li>
-    </ul>
-    <hr>
-    <h2>Colorschemes</h2>
-    <table width="100%" valign="top" cellpadding="0px" cellspacing="1px">
-      <% color_names.each_with_index do |color_name, index| %>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">Vim Color Scheme Test</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-        <% if index % 3 == 0 %>
-          <tr valign="top">
+
+    <div class="container">
+      <div class="hero-unit">
+        <h1>VIM Color Scheme Test</h1>
+        <p>
+          <br/>
+          Select <tt>color boxes</tt> height (in pixels):
+          <br/>
+          <input type="radio" name="height" value="100"onclick="changeHeight(100);">&nbsp;100</input>
+          <input type="radio" name="height" value="200"onclick="changeHeight(200);">&nbsp;200</input>
+          <input type="radio" name="height" value="300"onclick="changeHeight(300);" checked>&nbsp;300</input>
+          <input type="radio" name="height" value="400"onclick="changeHeight(400);">&nbsp;400</input>
+          <input type="radio" name="height" value="500"onclick="changeHeight(500);">&nbsp;500</input>
+          <input type="radio" name="height" value="600"onclick="changeHeight(600);">&nbsp;600</input>
+        </p>
+          <p><a class="btn primary large" href="https://github.com/metalelf0/VimColorSchemeTest-Ruby">Github Repo &raquo;</a></p>
+      </div>
+
+        <% color_names.each_with_index do |color_name, index| %>
+
+          <% if index % 4 == 0 %>
+            <div class="row">
+          <% end %>
+
+          <div class="span4 colorscheme-box">
+            <span class="iframe_title"><%= color_name %></span>&mdash;
+            <a class="frames" href="colorschemes/<%= color_name %>.vim">Download</a> &mdash;
+            <a class="iframe" href="<%= "#{language_name}/#{color_name}.html" %>">Preview</a><br/>
+            <iframe src="<%= "#{language_name}/#{color_name}.html" %>" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+          </div>
+
+          <% if index % 4 == 3 %>
+            </div>
+          <% end %>
+
         <% end %>
-
-        <td width="33%" height="300px">
-          <span class="iframe_title"><%= color_name %></span>&mdash;
-          <a class="frames" href="colorschemes/<%= color_name %>.vim">Download</a> &mdash;
-          <a class="iframe" href="<%= "#{language_name}/#{color_name}.html" %>">Preview</a><br/>
-          <iframe src="<%= "#{language_name}/#{color_name}.html" %>" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
-        </td>
-
-        <% if index % 3 == 2 %>
-          </tr>
-        <% end %>
-
-      <% end %>
-    </table>
+      </div>
+      <footer>
+        <p>By Andrea Schiavini - Original idea by <a href="http://code.google.com/p/vimcolorschemetest/" target="_blank">maverick.woo</a></p>
+      </footer>
+    </div>
   </body>
 </html>
