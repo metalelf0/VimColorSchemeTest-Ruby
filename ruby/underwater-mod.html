@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/codice_elf0/personal_stuff/vimcolorschemetest-rb/samples/ruby.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="number_lines,use_css,expand_tabs">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #e3f3fa; background-color: #102235; }
+body { font-family: monospace; color: #e3f3fa; background-color: #102235; }
+.lnr { color: #1c3249; background-color: #102235; }
+.Normal { color: #e3f3fa; background-color: #102235; }
+.Constant { color: #ffc287; background-color: #102235; }
+.Statement { color: #68cee8; background-color: #102235; }
+.Keyword { color: #8ac6f2; background-color: #102235; }
+.Special { color: #b9e19d; background-color: #102235; }
+.String { color: #89e14b; background-color: #102235; font-style: italic; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span>$LOAD_PATH.unshift <span class="String">&quot;</span><span class="Special">#{</span>File<span class="Special">.dirname(</span>__FILE__<span class="Special">)</span><span class="Special">}</span><span class="String">/../lib</span><span class="String">&quot;</span>
+<span class="lnr"> 2 </span>require <span class="String">'</span><span class="String">active_record</span><span class="String">'</span>
+<span class="lnr"> 3 </span>
+<span class="lnr"> 4 </span><span class="Keyword">class</span> Person &lt; ActiveRecord<span class="Statement">::</span>Base
+<span class="lnr"> 5 </span>  establish_connection :adapter =&gt; <span class="String">'</span><span class="String">sqlite3</span><span class="String">'</span>, :database =&gt; <span class="String">'</span><span class="String">foobar.db</span><span class="String">'</span>
+<span class="lnr"> 6 </span>  connection.create_table table_name, :force =&gt; <span class="Constant">true</span> do |<span class="Normal">t</span>|
+<span class="lnr"> 7 </span>    t.string :name
+<span class="lnr"> 8 </span>  end
+<span class="lnr"> 9 </span><span class="Keyword">end</span>
+<span class="lnr">10 </span>
+<span class="lnr">11 </span>bob = Person.create!(:name =&gt; <span class="String">'</span><span class="String">bob</span><span class="String">'</span>)
+<span class="lnr">12 </span>puts Person.all.inspect
+<span class="lnr">13 </span>bob.destroy
+<span class="lnr">14 </span>puts Person.all.inspect
+</pre>
+</body>
+</html>
