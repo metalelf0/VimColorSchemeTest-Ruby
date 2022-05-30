@@ -4,15 +4,15 @@ Vim Color Scheme Test Ruby
 See it in action!
 ---
 
-http://metalelf0.github.com/VimColorSchemeTest-Ruby/python.html
+http://metalelf0.github.io/VimColorSchemeTest-Ruby/python.html
 
-http://metalelf0.github.com/VimColorSchemeTest-Ruby/ruby.html
+http://metalelf0.github.io/VimColorSchemeTest-Ruby/ruby.html
 
 Preview
 ---
 
-![](http://github.com/metalelf0/VimColorSchemeTest-Ruby/raw/master/screenshots/screenshot_01.png)
-![](http://github.com/metalelf0/VimColorSchemeTest-Ruby/raw/master/screenshots/screenshot_02.png)
+![](http://github.io/metalelf0/VimColorSchemeTest-Ruby/raw/master/screenshots/screenshot_01.png)
+![](http://github.io/metalelf0/VimColorSchemeTest-Ruby/raw/master/screenshots/screenshot_02.png)
 
 Why
 ----
